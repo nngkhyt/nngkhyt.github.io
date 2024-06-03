@@ -157,7 +157,7 @@ nngkhyt.github.io/
 	                        <div class="card-body">
 	                            <h5 class="card-title"><i class="fab fa-instagram"></i> Instagram</h5>
 	                            <p class="card-text">インスタグラムでは気分で写真を載せています</p>
-	                            <a href="https://www.instagram.com/nngkhyt" class="btn btn-primary">Visit Instagram</a>
+	                            <a href="https://www.instagram.com/nngkhyt" target = '_blank' class="btn btn-primary">Instagramをフォローする</a>
 	                        </div>
 	                    </div>
 	                </div>
@@ -167,7 +167,7 @@ nngkhyt.github.io/
 	                        <div class="card-body">
 	                            <h5 class="card-title"><i class="fab fa-thread"></i> Threads</h5>
 	                            <p class="card-text">Threadsでは日常的なつぶやきを投稿しています</p>
-	                            <a href="https://www.threads.net/nngkhyt" class="btn btn-primary">Visit Threads</a>
+	                            <a href="https://www.threads.net/nngkhyt" target = '_blank' class="btn btn-primary">Threadsをフォローする</a>
 	                        </div>
 	                    </div>
 	                </div>
@@ -211,21 +211,43 @@ nngkhyt.github.io/
 	    </header>
 	    <section class="news-search py-5">
 	        <div class="container">
-	            <h2 class="text-center mb-4">Search News</h2>
-	            <form class="form-inline justify-content-center">
-	                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	            <h2 class="text-center mb-4">記事を検索する</h2>
+	            <form class="form-inline justify-content-center" onsubmit="event.preventDefault(); filterNews();">
+	                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	                <select id="yearSelect" class="form-control mr-sm-2">
+	                    <option value="">年</option>
+	                    <option value="2024">2024</option>
+	                    <option value="2023">2023</option>
+	                    <!-- Add more years as needed -->
+	                </select>
+	                <select id="monthSelect" class="form-control mr-sm-2">
+	                    <option value="">月</option>
+	                    <option value="01">January</option>
+	                    <option value="02">February</option>
+	                    <option value="03">March</option>
+	                    <option value="04">April</option>
+	                    <option value="05">May</option>
+	                    <option value="06">June</option>
+	                    <option value="07">July</option>
+	                    <option value="08">August</option>
+	                    <option value="09">September</option>
+	                    <option value="10">October</option>
+	                    <option value="11">November</option>
+	                    <option value="12">December</option>
+	                </select>
+	                <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">検索</button>
+	                <button id="resetButton" class="btn btn-outline-secondary my-2 my-sm-0" type="button" onclick="resetFilters()">リセット</button>
 	            </form>
 	        </div>
 	    </section>
 	    <section class="news-tags py-5">
 	        <div class="container">
-	            <h2 class="text-center mb-4">Tags</h2>
+	            <h2 class="text-center mb-4">タグで絞り込む</h2>
 	            <div class="row justify-content-center">
-	                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('All')">All</button>
-	                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('Tag1')">Tag1</button>
-	                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('Tag2')">Tag2</button>
-	                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('Tag3')">Tag3</button>
+	                <button id="tagAll" class="btn btn-outline-secondary m-2" onclick="setTag('All')">All</button>
+	                <button id="tagTag1" class="btn btn-outline-secondary m-2" onclick="setTag('Tag1')">Tag1</button>
+	                <button id="tagTag2" class="btn btn-outline-secondary m-2" onclick="setTag('Tag2')">Tag2</button>
+	                <button id="tagTag3" class="btn btn-outline-secondary m-2" onclick="setTag('Tag3')">Tag3</button>
 	            </div>
 	        </div>
 	    </section>
@@ -265,22 +287,11 @@ nngkhyt.github.io/
 	                        </div>
 	                    </div>
 	                </div>
-	                <!-- Add more news items as needed -->
 	            </div>
 	        </div>
 	    </section>
-	    <section class="news-archive py-5 bg-light">
-	        <div class="container">
-	            <h2 class="text-center mb-4">News Archive</h2>
-	            <ul class="list-group list-group-flush">
-	                <li class="list-group-item"><a href="#" onclick="filterNewsByDate('2024-06')">June 2024</a></li>
-	                <li class="list-group-item"><a href="#" onclick="filterNewsByDate('2024-05')">May 2024</a></li>
-	                <li class="list-group-item"><a href="#" onclick="filterNewsByDate('2024-04')">April 2024</a></li>
-	            </ul>
-	        </div>
-	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 My Static Website</p>
+	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -360,15 +371,15 @@ nngkhyt.github.io/
 	                        <li class="list-group-item"><a href='https://opg.optica.org/abstract.cfm?uri=OFS-2023-Tu3.85' target="_blank">Fast Brillouin frequency shift measurement by zero-crossing point search in the virtually composed spectra of Brillouin gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Bin Zan, Yosuke Tanaka 28-th International Conference on Optical Fiber Sensors (OFS-28) 2023年11月21日</a></li>
 	                    </ul>
 	                    <h4 class="mt-4">お問い合わせ</h4>
-	                    <p><a href="https://forms.gle/iX57GcxcSSSLzFdJ7" class="btn btn-primary">Google Form</a></p>
+	                    <p><a href="https://forms.gle/iX57GcxcSSSLzFdJ7" class="btn btn-primary">Google フォーム</a></p>
 	                    
 	                </div>
 	            </div>
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 nngkhyt blog</p>
-	    </footer>
+	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
+	    </footer>    
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -477,32 +488,113 @@ nngkhyt.github.io/
 	    font-size: 1.75rem;
 	    color: #343a40;
 	}
+	
+	
+	.selected-tag {
+	    background-color: #6f42c1; 
+	    color: white;
+	    border-color: #6f42c1;
+	}
+	
+	.searching {
+	    background-color: #28a745 !important; 
+	    color: white !important;
+	    border-color: #28a745 !important;
+	}
+	
+	.mr-2 {
+	    margin-right: 0.5rem !important;
+	}
+	
+	
 
 
 
 [C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\js\scripts.js]
 
-	function filterNewsByTag(tag) {
-	    var newsItems = document.querySelectorAll('.news-item');
-	    newsItems.forEach(function(item) {
-	        if (tag === 'All' || item.getAttribute('data-tags').includes(tag)) {
-	            item.style.display = 'block';
+	let selectedTag = 'All';
+	
+	function setTag(tag) {
+	    selectedTag = tag;
+	    updateTagStyles();
+	    filterNews();
+	}
+	
+	function updateTagStyles() {
+	    const tagButtons = document.querySelectorAll('.news-tags .btn');
+	    tagButtons.forEach(button => {
+	        if (button.textContent.trim() === selectedTag) {
+	            button.classList.add('selected-tag');
+	            button.classList.remove('btn-outline-secondary');
 	        } else {
-	            item.style.display = 'none';
+	            button.classList.remove('selected-tag');
+	            button.classList.add('btn-outline-secondary');
 	        }
 	    });
 	}
 	
-	function filterNewsByDate(date) {
-	    var newsItems = document.querySelectorAll('.news-item');
+	function filterNewsByTag(newsItem) {
+	    if (selectedTag === 'All') {
+	        return true;
+	    } else {
+	        return newsItem.getAttribute('data-tags').includes(selectedTag);
+	    }
+	}
+	
+	function filterNewsByDate(newsItem, year, month) {
+	    const itemDate = newsItem.getAttribute('data-date');
+	    if (!year && !month) {
+	        return true;
+	    } else if (year && !month) {
+	        return itemDate.startsWith(year);
+	    } else if (!year && month) {
+	        return itemDate.endsWith(month);
+	    } else {
+	        return itemDate.startsWith(year) && itemDate.includes(`-${month}`);
+	    }
+	}
+	
+	function searchNews(newsItem, searchText) {
+	    const title = newsItem.querySelector('.card-title').textContent.toLowerCase();
+	    const summary = newsItem.querySelector('.card-text').textContent.toLowerCase();
+	    return title.includes(searchText) || summary.includes(searchText);
+	}
+	
+	function filterNews() {
+	    const input = document.getElementById('searchInput').value.toLowerCase();
+	    const year = document.getElementById('yearSelect').value;
+	    const month = document.getElementById('monthSelect').value;
+	    const newsItems = document.querySelectorAll('.news-item');
 	    newsItems.forEach(function(item) {
-	        if (item.getAttribute('data-date').startsWith(date)) {
+	        if (filterNewsByTag(item) && searchNews(item, input) && filterNewsByDate(item, year, month)) {
 	            item.style.display = 'block';
 	        } else {
 	            item.style.display = 'none';
 	        }
 	    });
+	    updateSearchButtonStyle(input !== "" || year !== "" || month !== "");
 	}
+	
+	function updateSearchButtonStyle(isSearching) {
+	    const searchButton = document.getElementById('searchButton');
+	    if (isSearching) {
+	        searchButton.classList.add('searching');
+	    } else {
+	        searchButton.classList.remove('searching');
+	    }
+	}
+	
+	function resetFilters() {
+	    document.getElementById('searchInput').value = '';
+	    document.getElementById('yearSelect').selectedIndex = 0;
+	    document.getElementById('monthSelect').selectedIndex = 0;
+	    setTag('All');
+	    filterNews();
+	}
+	
+	document.addEventListener('DOMContentLoaded', function() {
+	    updateTagStyles();
+	});
 
 
 

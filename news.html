@@ -21,21 +21,43 @@
     </header>
     <section class="news-search py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Search News</h2>
-            <form class="form-inline justify-content-center">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <h2 class="text-center mb-4">記事を検索する</h2>
+            <form class="form-inline justify-content-center" onsubmit="event.preventDefault(); filterNews();">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <select id="yearSelect" class="form-control mr-sm-2">
+                    <option value="">年</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <!-- Add more years as needed -->
+                </select>
+                <select id="monthSelect" class="form-control mr-sm-2">
+                    <option value="">月</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">検索</button>
+                <button id="resetButton" class="btn btn-outline-secondary my-2 my-sm-0" type="button" onclick="resetFilters()">リセット</button>
             </form>
         </div>
     </section>
     <section class="news-tags py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Tags</h2>
+            <h2 class="text-center mb-4">タグで絞り込む</h2>
             <div class="row justify-content-center">
-                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('All')">All</button>
-                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('Tag1')">Tag1</button>
-                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('Tag2')">Tag2</button>
-                <button class="btn btn-outline-secondary m-2" onclick="filterNewsByTag('Tag3')">Tag3</button>
+                <button id="tagAll" class="btn btn-outline-secondary m-2" onclick="setTag('All')">All</button>
+                <button id="tagTag1" class="btn btn-outline-secondary m-2" onclick="setTag('Tag1')">Tag1</button>
+                <button id="tagTag2" class="btn btn-outline-secondary m-2" onclick="setTag('Tag2')">Tag2</button>
+                <button id="tagTag3" class="btn btn-outline-secondary m-2" onclick="setTag('Tag3')">Tag3</button>
             </div>
         </div>
     </section>
@@ -75,22 +97,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- Add more news items as needed -->
             </div>
         </div>
     </section>
-    <section class="news-archive py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">News Archive</h2>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="#" onclick="filterNewsByDate('2024-06')">June 2024</a></li>
-                <li class="list-group-item"><a href="#" onclick="filterNewsByDate('2024-05')">May 2024</a></li>
-                <li class="list-group-item"><a href="#" onclick="filterNewsByDate('2024-04')">April 2024</a></li>
-            </ul>
-        </div>
-    </section>
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 My Static Website</p>
+        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
