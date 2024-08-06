@@ -15,34 +15,35 @@ nngkhyt.github.io/
 | | |-----odaiba_TOKYO.jpg
 | -----profile/
 | | |-----nngkhyt_300x300.jpg
+| | |-----UnknownIcon.png
 -----js/
 | |-----scripts.js
 -----news/
 | |-----news_1.html
 | |-----news_2.html
+| |-----news_n.html
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\index.html]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\index.html]
 
 	<!DOCTYPE html>
 	<html lang="ja">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Home</title>
+	    <title>実数Kは存在しない</title>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="css/styles.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
 	    <header class="bg-dark text-white text-center py-3">
-	        <h1>My Static Website</h1>
-	        <nav>
-	            <ul class="nav justify-content-center">
-	                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="news.html">News</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="links.html">Link</a></li>
-	            </ul>
+	        <h1 class="cool-title">実数Kは存在しない</h1>
+	        <nav class="nav justify-content-center">
+	            <a class="nav-link text-white" href="index.html">Home</a>
+	            <a class="nav-link text-white" href="news.html">News</a>
+	            <a class="nav-link text-white" href="profile.html">Profile</a>
+	            <a class="nav-link text-white" href="links.html">Link</a>
 	        </nav>
 	    </header>
 	    <section class="hero text-white text-center py-5">
@@ -55,21 +56,21 @@ nngkhyt.github.io/
 	        <div class="container">
 	            <h2 class="text-center mb-4">Recent News</h2>
 	            <div class="row">
-	                <div class="col-md-4">
-	                    <div class="card mb-4 shadow-sm">
+	                <div class="col-md-4 mb-4">
+	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title">News 1</h5>
 	                            <p class="card-text">Summary of news 1...</p>
-	                            <a href="news/news_1.html" class="btn btn-primary">Read More</a>
+	                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
-	                    <div class="card mb-4 shadow-sm">
+	                <div class="col-md-4 mb-4">
+	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title">News 2</h5>
 	                            <p class="card-text">Summary of news 2...</p>
-	                            <a href="news/news_2.html" class="btn btn-primary">Read More</a>
+	                            <a href="news/news_2.html" class="btn btn-primary" target="_blank">Read More</a>
 	                        </div>
 	                    </div>
 	                </div>
@@ -80,21 +81,21 @@ nngkhyt.github.io/
 	        <div class="container">
 	            <h2 class="text-center mb-4">Featured Articles</h2>
 	            <div class="row">
-	                <div class="col-md-4">
-	                    <div class="card mb-4 shadow-sm">
+	                <div class="col-md-4 mb-4">
+	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title">Featured 1</h5>
 	                            <p class="card-text">Summary of featured article 1...</p>
-	                            <a href="#" class="btn btn-primary">Read More</a>
+	                            <a href="#" class="btn btn-primary" target="_blank">Read More</a>
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4">
-	                    <div class="card mb-4 shadow-sm">
+	                <div class="col-md-4 mb-4">
+	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title">Featured 2</h5>
 	                            <p class="card-text">Summary of featured article 2...</p>
-	                            <a href="#" class="btn btn-primary">Read More</a>
+	                            <a href="#" class="btn btn-primary" target="_blank">Read More</a>
 	                        </div>
 	                    </div>
 	                </div>
@@ -105,15 +106,15 @@ nngkhyt.github.io/
 	        <div class="container">
 	            <h2 class="text-center mb-4">Sitemap</h2>
 	            <ul class="list-group list-group-flush">
-	                <li class="list-group-item"><a href="index.html">Home</a></li>
-	                <li class="list-group-item"><a href="news.html">News</a></li>
-	                <li class="list-group-item"><a href="profile.html">Profile</a></li>
-	                <li class="list-group-item"><a href="links.html">Link</a></li>
+	                <li class="list-group-item"><a href="index.html" target="_blank">Home</a></li>
+	                <li class="list-group-item"><a href="news.html" target="_blank">News</a></li>
+	                <li class="list-group-item"><a href="profile.html" target="_blank">Profile</a></li>
+	                <li class="list-group-item"><a href="links.html" target="_blank">Link</a></li>
 	            </ul>
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 My Static Website</p>
+	        <p>&copy; 2024 実数Kは存在しない</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -123,90 +124,84 @@ nngkhyt.github.io/
 
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\links.html]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\links.html]
 
 	<!DOCTYPE html>
 	<html lang="ja">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Links</title>
+	    <title>実数Kは存在しない</title>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="css/styles.css">
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
 	    <header class="bg-dark text-white text-center py-3">
-	        <h1>Links</h1>
-	        <nav>
-	            <ul class="nav justify-content-center">
-	                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="news.html">News</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="links.html">Link</a></li>
-	            </ul>
+	        <h1 class="cool-title">実数Kは存在しない</h1>
+	        <nav class="nav justify-content-center">
+	            <a class="nav-link text-white" href="index.html">Home</a>
+	            <a class="nav-link text-white" href="news.html">News</a>
+	            <a class="nav-link text-white" href="profile.html">Profile</a>
+	            <a class="nav-link text-white" href="links.html">Link</a>
 	        </nav>
 	    </header>
 	    <section class="links py-5">
 	        <div class="container">
 	            <h2 class="text-center mb-4">各種SNSリンク</h2>
 	            <div class="row">
-	                <!-- Instagram Link Card -->
 	                <div class="col-md-6 mb-4">
 	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title"><i class="fab fa-instagram"></i> Instagram</h5>
 	                            <p class="card-text">インスタグラムでは気分で写真を載せています</p>
-	                            <a href="https://www.instagram.com/nngkhyt" target = '_blank' class="btn btn-primary">Instagramをフォローする</a>
+	                            <a href="https://www.instagram.com/nngkhyt" target="_blank" class="btn btn-primary">Instagramをフォローする</a>
 	                        </div>
 	                    </div>
 	                </div>
-	                <!-- Threads Link Card -->
 	                <div class="col-md-6 mb-4">
 	                    <div class="card shadow-sm">
 	                        <div class="card-body">
-	                            <h5 class="card-title"><i class="fab fa-thread"></i> Threads</h5>
+	                            <h5 class="card-title"><i class="fab fa-thread"></i> @ Threads</h5>
 	                            <p class="card-text">Threadsでは日常的なつぶやきを投稿しています</p>
-	                            <a href="https://www.threads.net/nngkhyt" target = '_blank' class="btn btn-primary">Threadsをフォローする</a>
+	                            <a href="https://www.threads.net/nngkhyt" target="_blank" class="btn btn-primary">Threadsをフォローする</a>
 	                        </div>
 	                    </div>
 	                </div>
-	                <!-- Add more link cards as needed -->
 	            </div>
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
 	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
-	    </footer>    
+	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</body>
 	</html>
 
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\news.html]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\news.html]
 
 	<!DOCTYPE html>
 	<html lang="ja">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>News</title>
+	    <title>実数Kは存在しない</title>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="css/styles.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
 	    <header class="bg-dark text-white text-center py-3">
-	        <h1>News</h1>
-	        <nav>
-	            <ul class="nav justify-content-center">
-	                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="news.html">News</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="links.html">Link</a></li>
-	            </ul>
+	        <h1 class="cool-title">実数Kは存在しない</h1>
+	        <nav class="nav justify-content-center">
+	            <a class="nav-link text-white" href="index.html">Home</a>
+	            <a class="nav-link text-white" href="news.html">News</a>
+	            <a class="nav-link text-white" href="profile.html">Profile</a>
+	            <a class="nav-link text-white" href="links.html">Link</a>
 	        </nav>
 	    </header>
 	    <section class="news-search py-5">
@@ -218,7 +213,6 @@ nngkhyt.github.io/
 	                    <option value="">年</option>
 	                    <option value="2024">2024</option>
 	                    <option value="2023">2023</option>
-	                    <!-- Add more years as needed -->
 	                </select>
 	                <select id="monthSelect" class="form-control mr-sm-2">
 	                    <option value="">月</option>
@@ -255,12 +249,12 @@ nngkhyt.github.io/
 	        <div class="container">
 	            <h2 class="text-center mb-4">News List</h2>
 	            <div class="row">
-	                <div class="col-md-4 news-item" data-tags="Tag1 Tag2" data-date="2024-06">
-	                    <div class="card mb-4 shadow-sm">
+	                <div class="col-md-4 news-item mb-4" data-tags="Tag1 Tag2" data-date="2024-06">
+	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title">News 1</h5>
 	                            <p class="card-text">Summary of news 1...</p>
-	                            <a href="news/news_1.html" class="btn btn-primary">Read More</a>
+	                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
 	                            <div class="mt-2">
 	                                <span class="badge badge-secondary">Tag1</span>
 	                                <span class="badge badge-secondary">Tag2</span>
@@ -271,12 +265,12 @@ nngkhyt.github.io/
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-md-4 news-item" data-tags="Tag1 Tag3" data-date="2024-05">
-	                    <div class="card mb-4 shadow-sm">
+	                <div class="col-md-4 news-item mb-4" data-tags="Tag1 Tag3" data-date="2024-05">
+	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title">News 2</h5>
 	                            <p class="card-text">Summary of news 2...</p>
-	                            <a href="news/news_2.html" class="btn btn-primary">Read More</a>
+	                            <a href="news/news_2.html" class="btn btn-primary" target="_blank">Read More</a>
 	                            <div class="mt-2">
 	                                <span class="badge badge-secondary">Tag1</span>
 	                                <span class="badge badge-secondary">Tag3</span>
@@ -291,38 +285,37 @@ nngkhyt.github.io/
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
+	        <p>&copy; 2024 実数Kは存在しない</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	    <script src="js/scripts.js"></script>
 	</body>
 	</html>
 
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\profile.html]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\profile.html]
 
 	<!DOCTYPE html>
 	<html lang="ja">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Profile</title>
+	    <title>実数Kは存在しない</title>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="css/styles.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
 	    <header class="bg-dark text-white text-center py-3">
-	        <h1>Profile</h1>
-	        <nav>
-	            <ul class="nav justify-content-center">
-	                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="news.html">News</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="links.html">Link</a></li>
-	            </ul>
+	        <h1 class="cool-title">実数Kは存在しない</h1>
+	        <nav class="nav justify-content-center">
+	            <a class="nav-link text-white" href="index.html">Home</a>
+	            <a class="nav-link text-white" href="news.html">News</a>
+	            <a class="nav-link text-white" href="profile.html">Profile</a>
+	            <a class="nav-link text-white" href="links.html">Link</a>
 	        </nav>
 	    </header>
 	    <section class="profile py-5">
@@ -330,7 +323,7 @@ nngkhyt.github.io/
 	            <h2 class="text-center mb-4">プロフィール</h2>
 	            <div class="row">
 	                <div class="col-md-4 text-center">
-	                    <img src=".\images\profile\nngkhyt_300x300.jpg" alt="Profile Photo" class="img-fluid rounded-circle mb-3 shadow">
+	                    <img src="images/profile/UnknownIcon.png" alt="Profile Photo" class="img-fluid rounded-circle mb-3 shadow">
 	                </div>
 	                <div class="col-md-8">
 	                    <h3>Hayato Nonogaki / 野々垣 颯人</h3>
@@ -360,43 +353,45 @@ nngkhyt.github.io/
 	                    <h4 class="mt-4">研究活動</h4>
 	                    <h5>論文</h5>
 	                    <ul class="list-group list-group-flush mb-4">
-	                        <li class="list-group-item"><a href='https://ieeexplore.ieee.org/document/10473674' target="_blank">Brillouin frequency shift estimation for Brillouin optical time domain analysis using Brillouin gain and loss spectra with SVC, Hayato Nonogaki, Kazuki Hoshino, Daiki Saito, Mohd Saiful Dzulkefly Bin Zan, Yosuke Tanaka IEEE Sensors Journal 24(9) 14261-14269 2024年5月1日</a></li>
-	                        <li class="list-group-item"><a href='https://iopscience.iop.org/article/10.35848/1882-0786/ad422f' target="_blank">Brillouin frequency shift measurement by zero-crossing point search in virtually synthesized spectra of Brillouin gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Zan, Yosuke Tanaka Applied Physics Express 17(5) 052003-052003 2024年5月15日</a></li>
+	                        <li class="list-group-item"><a href="https://ieeexplore.ieee.org/document/10473674" target="_blank">Brillouin frequency shift estimation for Brillouin optical time domain analysis using Brillouin gain and loss spectra with SVC, Hayato Nonogaki, Kazuki Hoshino, Daiki Saito, Mohd Saiful Dzulkefly Bin Zan, Yosuke Tanaka IEEE Sensors Journal 24(9) 14261-14269 2024年5月1日</a></li>
+	                        <li class="list-group-item"><a href="https://iopscience.iop.org/article/10.35848/1882-0786/ad422f" target="_blank">Brillouin frequency shift measurement by zero-crossing point search in virtually synthesized spectra of Brillouin gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Zan, Yosuke Tanaka Applied Physics Express 17(5) 052003-052003 2024年5月15日</a></li>
 	                    </ul>
 	                    <h5>口頭発表</h5>
 	                    <ul class="list-group list-group-flush mb-4">
-	                        <li class="list-group-item"><a href='https://opg.optica.org/abstract.cfm?uri=Sensors-2022-SM2C.6' target="_blank">Distributed strain sensing with simple system based on slope-assisted BOTDA using both gain and loss spectra, Hayato Nonogaki, Daiki Saito, Kazuki Hoshino, Yosuke Tanaka, Optical Sensors and Sensing Congress 2022年7月11日</a></li>
-	                        <li class="list-group-item"><a href='https://pub.confit.atlas.jp/ja/event/jsap2023a/presentation/23p-A308-5' target="_blank">ブリルアン利得・損失スペクトルを用いたサポートベクタ分類によるブリルアン周波数シフトの推定, 野々垣 颯人, 清 大地, 田中 洋介 第84回応用物理学会秋季学術講演会 2023年9月23日</a></li>
-	                        <li class="list-group-item"><a href='https://ken.ieice.org/ken/paper/202310123CXk/' target="_blank">ブリルアン利得と損失の仮想合成スペクトルのゼロクロス点探索によるブリルアン周波数シフト測定, 野々垣 颯人, 清 大地, Mohd Saiful Dzulkefly Bin Zan, 田中洋介 電子情報通信学会 光ファイバ応用技術研究会（OFT） 2023年10月12日</a></li>
-	                        <li class="list-group-item"><a href='https://opg.optica.org/abstract.cfm?uri=OFS-2023-Tu3.85' target="_blank">Fast Brillouin frequency shift measurement by zero-crossing point search in the virtually composed spectra of Brillouin gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Bin Zan, Yosuke Tanaka 28-th International Conference on Optical Fiber Sensors (OFS-28) 2023年11月21日</a></li>
+	                        <li class="list-group-item"><a href="https://opg.optica.org/abstract.cfm?uri=Sensors-2022-SM2C.6" target="_blank">Distributed strain sensing with simple system based on slope-assisted BOTDA using both gain and loss spectra, Hayato Nonogaki, Daiki Saito, Kazuki Hoshino, Yosuke Tanaka, Optical Sensors and Sensing Congress 2022年7月11日</a></li>
+	                        <li class="list-group-item"><a href="https://pub.confit.atlas.jp/ja/event/jsap2023a/presentation/23p-A308-5" target="_blank">ブリルアン利得・損失スペクトルを用いたサポートベクタ分類によるブリルアン周波数シフトの推定, 野々垣 颯人, 清 大地, 田中 洋介 第84回応用物理学会秋季学術講演会 2023年9月23日</a></li>
+	                        <li class="list-group-item"><a href="https://ken.ieice.org/ken/paper/202310123CXk/" target="_blank">ブリルアン利得と損失の仮想合成スペクトルのゼロクロス点探索によるブリルアン周波数シフト測定, 野々垣 颯人, 清 大地, Mohd Saiful Dzulkefly Bin Zan, 田中洋介 電子情報通信学会 光ファイバ応用技術研究会（OFT） 2023年10月12日</a></li>
+	                        <li class="list-group-item"><a href="https://opg.optica.org/abstract.cfm?uri=OFS-2023-Tu3.85" target="_blank">Fast Brillouin frequency shift measurement by zero-crossing point search in the virtually composed spectra of Brillouin gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Bin Zan, Yosuke Tanaka 28-th International Conference on Optical Fiber Sensors (OFS-28) 2023年11月21日</a></li>
 	                    </ul>
 	                    <h4 class="mt-4">お問い合わせ</h4>
-	                    <p><a href="https://forms.gle/iX57GcxcSSSLzFdJ7" class="btn btn-primary">Google フォーム</a></p>
-	                    
+	                    <p><a href="https://forms.gle/iX57GcxcSSSLzFdJ7" class="btn btn-primary" target="_blank">Google フォーム</a></p>
 	                </div>
 	            </div>
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
 	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
-	    </footer>    
+	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</body>
 	</html>
 
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\README.md]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\README.md]
 
 	# nngkhyt.github.io
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\css\styles.css]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\css\styles.css]
 
+	/* Google Fonts import */
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+	
 	body {
-	    font-family: Arial, sans-serif;
+	    font-family: 'Poppins', sans-serif;
 	    background-color: #f8f9fa;
 	    color: #343a40;
 	}
@@ -428,15 +423,22 @@ nngkhyt.github.io/
 	    z-index: 1;
 	}
 	
-	
 	footer {
 	    margin-top: 20px;
+	    background-color: #343a40;
+	    color: #fff;
+	    padding: 10px 0;
 	}
 	
 	.card {
 	    border: none;
 	    border-radius: 10px;
 	    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	    transition: transform 0.2s;
+	}
+	
+	.card:hover {
+	    transform: scale(1.05);
 	}
 	
 	.card .card-title {
@@ -489,7 +491,6 @@ nngkhyt.github.io/
 	    color: #343a40;
 	}
 	
-	
 	.selected-tag {
 	    background-color: #6f42c1; 
 	    color: white;
@@ -498,19 +499,78 @@ nngkhyt.github.io/
 	
 	.searching {
 	    background-color: #28a745 !important; 
-	    color: white !important;
-	    border-color: #28a745 !important;
+	    color: white !重要;
+	    border-color: #28a745 !重要;
 	}
 	
 	.mr-2 {
-	    margin-right: 0.5rem !important;
+	    margin-right: 0.5rem !重要;
 	}
 	
+	.news-header {
+	    background: #343a40;
+	    color: #fff;
+	    padding: 20px 0;
+	}
 	
+	.news-title {
+	    font-size: 2rem;
+	}
+	
+	.news-section {
+	    margin: 40px 0;
+	}
+	
+	.news-section h3 {
+	    border-bottom: 2px solid #007bff;
+	    padding-bottom: 10px;
+	    margin-bottom: 20px;
+	}
+	
+	.news-footer {
+	    background: #f8f9fa;
+	    padding: 20px 0;
+	}
+	
+	.content-links {
+	    margin-bottom: 20px;
+	    padding: 10px;
+	    border: 1px solid #007bff;
+	    border-radius: 5px;
+	    width: 200px;
+	    background-color: #f8f9fa;
+	}
+	
+	.content-links a {
+	    display: block;
+	    margin-bottom: 5px;
+	    color: #007bff;
+	    text-decoration: none;
+	    transition: color 0.3s;
+	}
+	
+	.content-links a:hover {
+	    color: #0056b3;
+	}
+	
+	/* Additional styles for the cool-title */
+	.cool-title {
+	    font-family: 'Poppins', sans-serif;
+	    color: #fff;
+	    background: linear-gradient(90deg, #ff7f50, #ffcccb); /* Orange to light pink gradient */
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+	    font-size: 3.5rem;
+	    text-transform: uppercase;
+	    letter-spacing: 0.1em;
+	    text-align: center;
+	    margin: 20px 0;
+	    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
+	}
 
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\js\scripts.js]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\js\scripts.js]
 
 	let selectedTag = 'All';
 	
@@ -598,27 +658,26 @@ nngkhyt.github.io/
 
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\news\news_1.html]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\news\news_1.html]
 
 	<!DOCTYPE html>
 	<html lang="ja">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>News 1</title>
+	    <title>実数Kは存在しない</title>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="../css/styles.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
 	    <header class="bg-dark text-white text-center py-3">
-	        <h1>News 1</h1>
-	        <nav>
-	            <ul class="nav justify-content-center">
-	                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="../news.html">News</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="../profile.html">Profile</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="../links.html">Link</a></li>
-	            </ul>
+	        <h1 class="cool-title">実数Kは存在しない</h1>
+	        <nav class="nav justify-content-center">
+	            <a class="nav-link text-white" href="../index.html">Home</a>
+	            <a class="nav-link text-white" href="../news.html">News</a>
+	            <a class="nav-link text-white" href="../profile.html">Profile</a>
+	            <a class="nav-link text-white" href="../links.html">Link</a>
 	        </nav>
 	    </header>
 	    <section class="news-details py-5">
@@ -630,53 +689,115 @@ nngkhyt.github.io/
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 My Static Website</p>
+	        <p>&copy; 2024 実数Kは存在しない</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</body>
 	</html>
 
 
 
-[C:\Users\Nonog\Documents\MyPortfolio\nngkhyt.github.io\news\news_2.html]
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\news\news_2.html]
 
 	<!DOCTYPE html>
 	<html lang="ja">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>News 2</title>
+	    <title>実数Kは存在しない</title>
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="../css/styles.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
 	    <header class="bg-dark text-white text-center py-3">
-	        <h1>News 2</h1>
-	        <nav>
-	            <ul class="nav justify-content-center">
-	                <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="../news.html">News</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="../profile.html">Profile</a></li>
-	                <li class="nav-item"><a class="nav-link text-white" href="../links.html">Link</a></li>
-	            </ul>
+	        <h1 class="cool-title">実数Kは存在しない</h1>
+	        <nav class="nav justify-content-center">
+	            <a class="nav-link text-white" href="../index.html">Home</a>
+	            <a class="nav-link text-white" href="../news.html">News</a>
+	            <a class="nav-link text-white" href="../profile.html">Profile</a>
+	            <a class="nav-link text-white" href="../links.html">Link</a>
 	        </nav>
 	    </header>
 	    <section class="news-details py-5">
 	        <div class="container">
 	            <h2>News 2 Title</h2>
-	            <p>Date: 2024-06-02</p>
+	            <p>Date: 2024-05-15</p>
 	            <p>Details about news 2...</p>
 	            <p>Tags: <span class="badge badge-secondary">Tag1</span> <span class="badge badge-secondary">Tag3</span></p>
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 My Static Website</p>
+	        <p>&copy; 2024 実数Kは存在しない</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</body>
+	</html>
+
+
+
+[C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\news\news_n.html]
+
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>実数Kは存在しない</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="../css/styles.css">
+	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	    <header class="news-header text-center">
+	        <h1 class="cool-title">実数Kは存在しない</h1>
+	        <nav class="nav justify-content-center">
+	            <a class="nav-link text-white" href="../index.html">Home</a>
+	            <a class="nav-link text-white" href="../news.html">News</a>
+	            <a class="nav-link text-white" href="../profile.html">Profile</a>
+	            <a class="nav-link text-white" href="../links.html">Link</a>
+	        </nav>
+	    </header>
+	    <section class="news-details py-5">
+	        <div class="container">
+	            <h2>News n Title</h2>
+	            <p class="text-muted">Date: 2024-xx-xx</p>
+	            <div class="content-links">
+	                <a href="#summary">Summary</a>
+	                <a href="#main-content">Main Content</a>
+	                <a href="#conclusion">Conclusion</a>
+	            </div>
+	            <hr>
+	            <section class="news-section" id="summary">
+	                <h3>Summary</h3>
+	                <p>Summary of news n...</p>
+	            </section>
+	            <section class="news-section" id="main-content">
+	                <h3>Main Content</h3>
+	                <p>Details about news n...</p>
+	                <h4>Subsection 1</h4>
+	                <p>Details about subsection 1...</p>
+	                <h4>Subsection 2</h4>
+	                <p>Details about subsection 2...</p>
+	            </section>
+	            <section class="news-section" id="conclusion">
+	                <h3>Conclusion</h3>
+	                <p>Concluding remarks...</p>
+	            </section>
+	            <hr>
+	            <p>Tags: <span class="badge badge-secondary">TagX</span> <span class="badge badge-secondary">TagY</span></p>
+	        </div>
+	    </section>
+	    <footer class="news-footer text-center">
+	        <p>&copy; 2024 実数Kは存在しない</p>
+	    </footer>
+	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+	    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</body>
 	</html>
 

@@ -1,5 +1,8 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
     color: #343a40;
 }
@@ -31,15 +34,22 @@ header {
     z-index: 1;
 }
 
-
 footer {
     margin-top: 20px;
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
 }
 
 .card {
     border: none;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 .card .card-title {
@@ -92,7 +102,6 @@ img.rounded-circle {
     color: #343a40;
 }
 
-
 .selected-tag {
     background-color: #6f42c1; 
     color: white;
@@ -109,4 +118,67 @@ img.rounded-circle {
     margin-right: 0.5rem !important;
 }
 
+.news-header {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
 
+.news-title {
+    font-size: 2rem;
+}
+
+.news-section {
+    margin: 40px 0;
+}
+
+.news-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.news-footer {
+    background: #f8f9fa;
+    padding: 20px 0;
+}
+
+.content-links {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 400px;
+    background-color: #f8f9fa;
+}
+
+.content-links a {
+    display: block;
+    margin-bottom: 5px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.content-links a:hover {
+    color: #0056b3;
+}
+
+/* Updated styles for the cool-title */
+/* Updated styles for the cool-title with rounded corners */
+.cool-title {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(90deg, #ffcccb, #ffcccb); /* Light pink gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 10px; /* Optional: Adjust padding to suit the rounded corners */
+    background-color: #ffcccb; /* Add background color for rounded effect */
+}

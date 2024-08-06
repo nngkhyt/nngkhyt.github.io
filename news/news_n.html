@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
+    <header class="news-header text-center">
         <h1 class="cool-title">実数Kは存在しない</h1>
         <nav class="nav justify-content-center">
             <a class="nav-link text-white" href="../index.html">Home</a>
@@ -20,13 +20,35 @@
     </header>
     <section class="news-details py-5">
         <div class="container">
-            <h2>News 2 Title</h2>
-            <p>Date: 2024-05-15</p>
-            <p>Details about news 2...</p>
-            <p>Tags: <span class="badge badge-secondary">Tag1</span> <span class="badge badge-secondary">Tag3</span></p>
+            <h2>News n Title</h2>
+            <p class="text-muted">Date: 2024-xx-xx</p>
+            <div class="content-links">
+                <a href="#summary">Summary</a>
+                <a href="#main-content">Main Content</a>
+                <a href="#conclusion">Conclusion</a>
+            </div>
+            <hr>
+            <section class="news-section" id="summary">
+                <h3>Summary</h3>
+                <p>Summary of news n...</p>
+            </section>
+            <section class="news-section" id="main-content">
+                <h3>Main Content</h3>
+                <p>Details about news n...</p>
+                <h4>Subsection 1</h4>
+                <p>Details about subsection 1...</p>
+                <h4>Subsection 2</h4>
+                <p>Details about subsection 2...</p>
+            </section>
+            <section class="news-section" id="conclusion">
+                <h3>Conclusion</h3>
+                <p>Concluding remarks...</p>
+            </section>
+            <hr>
+            <p>Tags: <span class="badge badge-secondary">TagX</span> <span class="badge badge-secondary">TagY</span></p>
         </div>
     </section>
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="news-footer text-center">
         <p>&copy; 2024 実数Kは存在しない</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

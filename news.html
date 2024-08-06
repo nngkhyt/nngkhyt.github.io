@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>実数Kは存在しない</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="bg-dark text-white text-center py-3">
-        <h1>News</h1>
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="news.html">News</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="profile.html">Profile</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="links.html">Link</a></li>
-            </ul>
+        <h1 class="cool-title">実数Kは存在しない</h1>
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-white" href="index.html">Home</a>
+            <a class="nav-link text-white" href="news.html">News</a>
+            <a class="nav-link text-white" href="profile.html">Profile</a>
+            <a class="nav-link text-white" href="links.html">Link</a>
         </nav>
     </header>
     <section class="news-search py-5">
@@ -28,7 +27,6 @@
                     <option value="">年</option>
                     <option value="2024">2024</option>
                     <option value="2023">2023</option>
-                    <!-- Add more years as needed -->
                 </select>
                 <select id="monthSelect" class="form-control mr-sm-2">
                     <option value="">月</option>
@@ -55,9 +53,8 @@
             <h2 class="text-center mb-4">タグで絞り込む</h2>
             <div class="row justify-content-center">
                 <button id="tagAll" class="btn btn-outline-secondary m-2" onclick="setTag('All')">All</button>
-                <button id="tagTag1" class="btn btn-outline-secondary m-2" onclick="setTag('Tag1')">Tag1</button>
-                <button id="tagTag2" class="btn btn-outline-secondary m-2" onclick="setTag('Tag2')">Tag2</button>
-                <button id="tagTag3" class="btn btn-outline-secondary m-2" onclick="setTag('Tag3')">Tag3</button>
+                <button id="tagGeneral" class="btn btn-outline-secondary m-2" onclick="setTag('General')">General</button>
+                <button id="tagAboutMe" class="btn btn-outline-secondary m-2" onclick="setTag('AboutMe')">AboutMe</button>
             </div>
         </div>
     </section>
@@ -65,34 +62,18 @@
         <div class="container">
             <h2 class="text-center mb-4">News List</h2>
             <div class="row">
-                <div class="col-md-4 news-item" data-tags="Tag1 Tag2" data-date="2024-06">
-                    <div class="card mb-4 shadow-sm">
+                <div class="col-md-4 news-item mb-4" data-tags="General AboutMe" data-date="2024-08">
+                    <div class="card shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title">News 1</h5>
-                            <p class="card-text">Summary of news 1...</p>
-                            <a href="news/news_1.html" class="btn btn-primary">Read More</a>
+                            <h5 class="card-title">個人サイトを開設してみました</h5>
+                            <p class="card-text">私はどこから来たのか 私は何者か 私は…</p>
+                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
                             <div class="mt-2">
-                                <span class="badge badge-secondary">Tag1</span>
-                                <span class="badge badge-secondary">Tag2</span>
+                                <span class="badge badge-secondary">General</span>
+                                <span class="badge badge-secondary">AboutMe</span>
                             </div>
                             <div class="mt-2">
-                                <small class="text-muted">Date: 2024-06-02</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 news-item" data-tags="Tag1 Tag3" data-date="2024-05">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">News 2</h5>
-                            <p class="card-text">Summary of news 2...</p>
-                            <a href="news/news_2.html" class="btn btn-primary">Read More</a>
-                            <div class="mt-2">
-                                <span class="badge badge-secondary">Tag1</span>
-                                <span class="badge badge-secondary">Tag3</span>
-                            </div>
-                            <div class="mt-2">
-                                <small class="text-muted">Date: 2024-05-15</small>
+                                <small class="text-muted">Date: 2024-08-06</small>
                             </div>
                         </div>
                     </div>
@@ -105,7 +86,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
