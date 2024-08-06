@@ -48,7 +48,7 @@ nngkhyt.github.io/
 	    </header>
 	    <section class="hero text-white text-center py-5">
 	        <div class="container">
-	            <h2>Welcome to nngkhyt blog</h2>
+	            <h2>Welcome to nngkhyt's Website</h2>
 	            <p>Latest news and articles at your fingertips.</p>
 	        </div>
 	    </section>
@@ -59,18 +59,9 @@ nngkhyt.github.io/
 	                <div class="col-md-4 mb-4">
 	                    <div class="card shadow-sm">
 	                        <div class="card-body">
-	                            <h5 class="card-title">News 1</h5>
-	                            <p class="card-text">Summary of news 1...</p>
+	                            <h5 class="card-title">個人サイトを開設してみました</h5>
+	                            <p class="card-text">私はどこから来たのか 私は何者か 私は…</p>
 	                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="col-md-4 mb-4">
-	                    <div class="card shadow-sm">
-	                        <div class="card-body">
-	                            <h5 class="card-title">News 2</h5>
-	                            <p class="card-text">Summary of news 2...</p>
-	                            <a href="news/news_2.html" class="btn btn-primary" target="_blank">Read More</a>
 	                        </div>
 	                    </div>
 	                </div>
@@ -84,18 +75,9 @@ nngkhyt.github.io/
 	                <div class="col-md-4 mb-4">
 	                    <div class="card shadow-sm">
 	                        <div class="card-body">
-	                            <h5 class="card-title">Featured 1</h5>
-	                            <p class="card-text">Summary of featured article 1...</p>
-	                            <a href="#" class="btn btn-primary" target="_blank">Read More</a>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="col-md-4 mb-4">
-	                    <div class="card shadow-sm">
-	                        <div class="card-body">
-	                            <h5 class="card-title">Featured 2</h5>
-	                            <p class="card-text">Summary of featured article 2...</p>
-	                            <a href="#" class="btn btn-primary" target="_blank">Read More</a>
+	                            <h5 class="card-title">個人サイトを開設してみました</h5>
+	                            <p class="card-text">私はどこから来たのか 私は何者か 私は…</p>
+	                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
 	                        </div>
 	                    </div>
 	                </div>
@@ -114,7 +96,7 @@ nngkhyt.github.io/
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 実数Kは存在しない</p>
+	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -239,9 +221,8 @@ nngkhyt.github.io/
 	            <h2 class="text-center mb-4">タグで絞り込む</h2>
 	            <div class="row justify-content-center">
 	                <button id="tagAll" class="btn btn-outline-secondary m-2" onclick="setTag('All')">All</button>
-	                <button id="tagTag1" class="btn btn-outline-secondary m-2" onclick="setTag('Tag1')">Tag1</button>
-	                <button id="tagTag2" class="btn btn-outline-secondary m-2" onclick="setTag('Tag2')">Tag2</button>
-	                <button id="tagTag3" class="btn btn-outline-secondary m-2" onclick="setTag('Tag3')">Tag3</button>
+	                <button id="tagGeneral" class="btn btn-outline-secondary m-2" onclick="setTag('General')">General</button>
+	                <button id="tagAboutMe" class="btn btn-outline-secondary m-2" onclick="setTag('AboutMe')">AboutMe</button>
 	            </div>
 	        </div>
 	    </section>
@@ -249,34 +230,18 @@ nngkhyt.github.io/
 	        <div class="container">
 	            <h2 class="text-center mb-4">News List</h2>
 	            <div class="row">
-	                <div class="col-md-4 news-item mb-4" data-tags="Tag1 Tag2" data-date="2024-06">
+	                <div class="col-md-4 news-item mb-4" data-tags="General AboutMe" data-date="2024-08">
 	                    <div class="card shadow-sm">
 	                        <div class="card-body">
-	                            <h5 class="card-title">News 1</h5>
-	                            <p class="card-text">Summary of news 1...</p>
+	                            <h5 class="card-title">個人サイトを開設してみました</h5>
+	                            <p class="card-text">私はどこから来たのか 私は何者か 私は…</p>
 	                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
 	                            <div class="mt-2">
-	                                <span class="badge badge-secondary">Tag1</span>
-	                                <span class="badge badge-secondary">Tag2</span>
+	                                <span class="badge badge-secondary">General</span>
+	                                <span class="badge badge-secondary">AboutMe</span>
 	                            </div>
 	                            <div class="mt-2">
-	                                <small class="text-muted">Date: 2024-06-02</small>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="col-md-4 news-item mb-4" data-tags="Tag1 Tag3" data-date="2024-05">
-	                    <div class="card shadow-sm">
-	                        <div class="card-body">
-	                            <h5 class="card-title">News 2</h5>
-	                            <p class="card-text">Summary of news 2...</p>
-	                            <a href="news/news_2.html" class="btn btn-primary" target="_blank">Read More</a>
-	                            <div class="mt-2">
-	                                <span class="badge badge-secondary">Tag1</span>
-	                                <span class="badge badge-secondary">Tag3</span>
-	                            </div>
-	                            <div class="mt-2">
-	                                <small class="text-muted">Date: 2024-05-15</small>
+	                                <small class="text-muted">Date: 2024-08-06</small>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -285,7 +250,7 @@ nngkhyt.github.io/
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 実数Kは存在しない</p>
+	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -499,12 +464,12 @@ nngkhyt.github.io/
 	
 	.searching {
 	    background-color: #28a745 !important; 
-	    color: white !重要;
-	    border-color: #28a745 !重要;
+	    color: white !important;
+	    border-color: #28a745 !important;
 	}
 	
 	.mr-2 {
-	    margin-right: 0.5rem !重要;
+	    margin-right: 0.5rem !important;
 	}
 	
 	.news-header {
@@ -535,9 +500,9 @@ nngkhyt.github.io/
 	.content-links {
 	    margin-bottom: 20px;
 	    padding: 10px;
-	    border: 1px solid #007bff;
+	    border: 1px solid #000000;
 	    border-radius: 5px;
-	    width: 200px;
+	    width: 400px;
 	    background-color: #f8f9fa;
 	}
 	
@@ -553,11 +518,12 @@ nngkhyt.github.io/
 	    color: #0056b3;
 	}
 	
-	/* Additional styles for the cool-title */
+	/* Updated styles for the cool-title */
+	/* Updated styles for the cool-title with rounded corners */
 	.cool-title {
 	    font-family: 'Poppins', sans-serif;
 	    color: #fff;
-	    background: linear-gradient(90deg, #ff7f50, #ffcccb); /* Orange to light pink gradient */
+	    background: linear-gradient(90deg, #ffcccb, #ffcccb); /* Light pink gradient */
 	    -webkit-background-clip: text;
 	    -webkit-text-fill-color: transparent;
 	    font-size: 3.5rem;
@@ -566,6 +532,9 @@ nngkhyt.github.io/
 	    text-align: center;
 	    margin: 20px 0;
 	    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
+	    border-radius: 10px; /* Add rounded corners */
+	    padding: 10px; /* Optional: Adjust padding to suit the rounded corners */
+	    background-color: #ffcccb; /* Add background color for rounded effect */
 	}
 
 
@@ -671,7 +640,7 @@ nngkhyt.github.io/
 	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
-	    <header class="bg-dark text-white text-center py-3">
+	    <header class="news-header text-center">
 	        <h1 class="cool-title">実数Kは存在しない</h1>
 	        <nav class="nav justify-content-center">
 	            <a class="nav-link text-white" href="../index.html">Home</a>
@@ -682,14 +651,67 @@ nngkhyt.github.io/
 	    </header>
 	    <section class="news-details py-5">
 	        <div class="container">
-	            <h2>News 1 Title</h2>
-	            <p>Date: 2024-06-02</p>
-	            <p>Details about news 1...</p>
-	            <p>Tags: <span class="badge badge-secondary">Tag1</span> <span class="badge badge-secondary">Tag2</span></p>
+	            <h2>個人サイトを開設してみました</h2>
+	            <p class="text-muted">Date: 2024-08-06</p>
+	            <div class="content-links">
+	                <a href="#summary">私はどこから来たのか 私は何者か 私はどこへ行くのか</a>
+	                <a href="#main-content">個人サイト開設にいたった経緯</a>
+	                <a href="#conclusion">最後に</a>
+	            </div>
+	            <hr>
+	            <section class="news-section" id="summary">
+	                
+	                <h3>私はどこから来たのか 私は何者か 私はどこへ行くのか</h3>
+	                <p>
+	                    個人サイトを開設してみました…と言ってもお前誰だよと多くの人は思うでしょう。このサイトのリンクはSNSに載せているだけのものなので、ここに辿り着く人は大体が私のことを知っているとは思いますが、ひょんなことから私とSNSを交換した人もいたでしょう。ですので軽く自己紹介をします。
+	                    <br><br>
+	                    私は岐阜県の大垣市というところで1999年の7月28日に生まれました。1999年の7の月というとノストラダムスの大予言の月です。当時ってどのくらいの数の人が予言を信じていたんですか？。予言は外れて世界は滅亡しませんでしたけど、もしかしたら自分が恐怖の大王である可能性も捨てきれないので安心しないでください。
+	                    <br><br>
+	                    中学校を出た後は岐阜高専に進学し、その後は東京の大学に編入学、院進、修了して2024年の4月から社会人をしています。岐阜高専では電子制御工学科、大学では電気電子工学を専攻しました。昔からガンダムやコードギアス、ゲームが好きだったのもあって、電気電子系の専門に進んだのは今思えばごく自然なことだったと思います。やりたいことも特になかったので学生時代の経験を活かして、とりあえず現在は東京でITエンジニアとして働いています。
+	                    <br><br>
+	                    これからどこへ行くかについてはまだ何も決めていません。全く働き方が変わっていく可能性もあるし、居住地が東京かそれ以外かも決まっていません。
+	                </p>
+	
+	            </section>
+	            <section class="news-section" id="main-content">
+	                
+	                <h3>個人サイト開設にいたった経緯</h3>
+	                <p>
+	                    ここからは個人サイト開設にいたった経緯を書いていきます。またこのサイト自体の存在意義についても書きたいと思います。
+	                </p>
+	                
+	                <h4>なぜ個人サイトを開設したか(why)</h4>
+	                <p>
+	                    一番の理由は自分自身の記録をとりたいからです。少し関係のない話を挟みますが、今までは大学進学だとか就職だとかを短期的な目的としてそれに向かって生きていました。そして、就職を機にそういった追われる感覚からはいったん解放されました。解放されたことで安堵の感情が大部分でしたが、一方でこのままだとあっという間に人生が終わってしまいそうという焦燥感に襲われました。何か短期的な目標をもっていないと人間は同じような毎日を過ごすことになります。それが幸せか否かについては置いといて、同じような毎日は人間の体感時間を確実に短くします。
+	                    <br><br>
+	                    自分はそれが嫌なので日々の記録をとることで自身の現状を把握し、目的の再確認と過去の振り返りができるプラットフォームが欲しくなりました。元々はX(旧Twitter)がその役割を務めていたのですが、Xの管理のしにくさと、生成AI技術によるWebサイト管理コストの低下により、個人サイトを開設することにしました。ちなみにXについてですが、大学院在学中の学会参加や学術論文執筆等で多忙の時期に、どうせ復活できるんでしょと一時的にアカウントを削除していたら、アカウントの存在ごと忘れてしまいそのまま復活できなくなって泣きました。
+	                    フォローしていたのは主に岐阜高専時代の同級生でしたが、一気にみんなの近況が知れなくなってとても悲しいです。
+	
+	                </p>
+	                <h4>なにを記録していくか(what)</h4>
+	                <p>
+	                    まだ"自分自身の記録"という大まかな内容しか決まっていないのが現状です。旅行記を書くかもしれないし、技術ブログを書くかもしれないし、学習した内容のまとめを書くかもしれません。それはこの個人サイトが対外的に公開されることを目的としたものではなく、ただの自己満だからです。かつてマナブやイケハヤといった"ブロガー"が流行っていたころに「自分もアフィリエイトで稼げるのでは」と考えてブログを開設したこともありますが、今回の個人サイト開設にはそのような目的はありません。
+	                    まあ黒歴史のようなものです。当時はWordpressを用いてブログを書いていたのですが、この前業務でWordpressのホーム画面を見たときは黒歴史が蘇って、「ヴっ」となりました。
+	                </p>
+	                <h4>どのように運用しているか(how)</h4>
+	                <p>
+	                    このサイトはGithub Pagesに全リソースを配置して公開しています。Githubアカウントがあれば誰でも無料でWebサイトをインターネット上に公開できるのでぜひ。詳細は<a href="https://prog-8.com/docs/github-pages" target="_blank">こちら</a>から。リンク先でHTML&CSSの基礎的な知識が必要と記載がありますが、生成AIを使えばコードを書かなくてもよいのでHTML&CSSの基礎的な知識がなくても大丈夫だと思います。
+	                    また、自分は構成管理ツールとして<a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree</a>と、画面装飾のために<a href="https://getbootstrap.jp/" target="_blank">Bootstrap</a>や<a href="https://fontawesome.com/" target="_blank">Font Awesome</a>を用いて運用しています。
+	                </p>
+	            </section>
+	            <section class="news-section" id="conclusion">
+	                <h3>最後に</h3>
+	                <p>
+	                    結果的にこの個人サイトは自分自身の記録をすることにより、目的の再確認と過去の振り返りを実現するプラットフォームとして誕生しました！
+	                    しばらくはITエンジニアとして働く傍らでこのサイトの更新をしていこうと思います。あらためてこれからもよろしくお願いします。そして様々なきっかけから私の個人サイトを見て興味を持ってくれた方はぜひお声かけください！
+	                </p>
+	            </section>
+	            <hr>
+	            <p>Tags: <span class="badge badge-secondary">General</span> <span class="badge badge-secondary">AboutMe</span></p>
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 実数Kは存在しない</p>
+	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
