@@ -42,8 +42,7 @@ function filterNewsByDate(newsItem, year, month) {
 
 function searchNews(newsItem, searchText) {
     const title = newsItem.querySelector('.card-title').textContent.toLowerCase();
-    const summary = newsItem.querySelector('.card-text').textContent.toLowerCase();
-    return title.includes(searchText) || summary.includes(searchText);
+    return title.includes(searchText);
 }
 
 function filterNews() {

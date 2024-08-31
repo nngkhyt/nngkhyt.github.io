@@ -13,6 +13,11 @@ nngkhyt.github.io/
 -----images/
 | -----hero/
 | | |-----odaiba_TOKYO.jpg
+| -----news/
+| | -----news_2/
+| | | |-----PokeconSampleImg.webp
+| | | |-----setup.png
+| | | |-----setup.pptx
 | -----profile/
 | | |-----nngkhyt_300x300.jpg
 | | |-----UnknownIcon.png
@@ -223,6 +228,7 @@ nngkhyt.github.io/
 	                <button id="tagAll" class="btn btn-outline-secondary m-2" onclick="setTag('All')">All</button>
 	                <button id="tagGeneral" class="btn btn-outline-secondary m-2" onclick="setTag('General')">General</button>
 	                <button id="tagAboutMe" class="btn btn-outline-secondary m-2" onclick="setTag('AboutMe')">AboutMe</button>
+	                <button id="tagAboutMe" class="btn btn-outline-secondary m-2" onclick="setTag('GameAutomation')">GameAutomation</button>
 	            </div>
 	        </div>
 	    </section>
@@ -234,7 +240,6 @@ nngkhyt.github.io/
 	                    <div class="card shadow-sm">
 	                        <div class="card-body">
 	                            <h5 class="card-title">個人サイトを開設してみました</h5>
-	                            <p class="card-text">私はどこから来たのか 私は何者か 私は…</p>
 	                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
 	                            <div class="mt-2">
 	                                <span class="badge badge-secondary">General</span>
@@ -242,6 +247,20 @@ nngkhyt.github.io/
 	                            </div>
 	                            <div class="mt-2">
 	                                <small class="text-muted">Date: 2024-08-06</small>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="col-md-4 news-item mb-4" data-tags="ゲーム自動化" data-date="2024-08">
+	                    <div class="card shadow-sm">
+	                        <div class="card-body">
+	                            <h5 class="card-title">Nintendo Switchのゲームを自動化する①</h5>
+	                            <a href="news/news_2.html" class="btn btn-primary" target="_blank">Read More</a>
+	                            <div class="mt-2">
+	                                <span class="badge badge-secondary">GameAutomation</span>
+	                            </div>
+	                            <div class="mt-2">
+	                                <small class="text-muted">Date: 2024-08-31</small>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -353,12 +372,15 @@ nngkhyt.github.io/
 [C:\Users\Nonog\OneDrive\ドキュメント\MyPortfolio\nngkhyt.github.io\css\styles.css]
 
 	/* Google Fonts import */
-	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400&display=swap');
+	/* Google Fonts import */
+	@import url('https://fonts.googleapis.com/css2?family=DotGothic16:wght@400&display=swap');
 	
 	body {
-	    font-family: 'Poppins', sans-serif;
+	    font-family: 'IBM Plex Sans JP', sans-serif;
 	    background-color: #f8f9fa;
 	    color: #343a40;
+	    font-weight: 400; /* 標準のフォントウェイトを指定 */
 	}
 	
 	header {
@@ -449,6 +471,14 @@ nngkhyt.github.io/
 	    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	}
 	
+	.responsive-image {
+	    max-width: 100%; /* 画像が親要素の幅に合わせて縮小するように設定 */
+	    height: auto;    /* 画像の縦横比を保ったまま高さを自動調整 */
+	        
+	    display: block; /* インライン要素をブロック要素に変換 */
+	    margin: 0 auto; /* 上下左右のマージンを自動で設定し、中央揃えにする */
+	}
+	
 	.section-title {
 	    text-align: center;
 	    margin-bottom: 30px;
@@ -499,10 +529,12 @@ nngkhyt.github.io/
 	
 	.content-links {
 	    margin-bottom: 20px;
-	    padding: 10px;
-	    border: 1px solid #000000;
+	    padding: 15px;
+	    border: 1px solid #4d4a4a;
 	    border-radius: 5px;
-	    width: 400px;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: flex-start;
 	    background-color: #f8f9fa;
 	}
 	
@@ -519,9 +551,8 @@ nngkhyt.github.io/
 	}
 	
 	/* Updated styles for the cool-title */
-	/* Updated styles for the cool-title with rounded corners */
 	.cool-title {
-	    font-family: 'Poppins', sans-serif;
+	    font-family: 'DotGothic16', sans-serif; /* DotGothic16 フォントを指定 */
 	    color: #fff;
 	    background: linear-gradient(90deg, #ffcccb, #ffcccb); /* Light pink gradient */
 	    -webkit-background-clip: text;
@@ -536,6 +567,7 @@ nngkhyt.github.io/
 	    padding: 10px; /* Optional: Adjust padding to suit the rounded corners */
 	    background-color: #ffcccb; /* Add background color for rounded effect */
 	}
+	
 
 
 
@@ -663,13 +695,13 @@ nngkhyt.github.io/
 	                
 	                <h3>私はどこから来たのか 私は何者か 私はどこへ行くのか</h3>
 	                <p>
-	                    個人サイトを開設してみました…と言ってもお前誰だよと多くの人は思うでしょう。このサイトのリンクはSNSに載せているだけのものなので、ここに辿り着く人は大体が私のことを知っているとは思いますが、ひょんなことから私とSNSを交換した人もいたでしょう。ですので軽く自己紹介をします。
+	                    個人サイトを開設してみました…と言ってもお前誰だよとなる人もいるかと。このサイトのリンクはSNSに載せているだけのものなので、ここに辿り着く人は大体が私のことを知っているとは思いますが、ひょんなことから私とSNSを交換した人もいたでしょう。ですので軽く自己紹介をします。
 	                    <br><br>
-	                    私は岐阜県の大垣市というところで1999年の7月28日に生まれました。1999年の7の月というとノストラダムスの大予言の月です。当時ってどのくらいの数の人が予言を信じていたんですか？。予言は外れて世界は滅亡しませんでしたけど、もしかしたら自分が恐怖の大王である可能性も捨てきれないので安心しないでください。
+	                    私は岐阜県の大垣市というところで1999年の7月28日に生まれました。1999年の7の月というとノストラダムスの大予言の月です。当時ってどのくらいの数の人が予言を信じていたんですか。予言は外れて世界は滅亡しませんでしたけど、もしかしたら自分が恐怖の大王である可能性も捨てきれないので安心しないでください。
 	                    <br><br>
-	                    中学校を出た後は岐阜高専に進学し、その後は東京の大学に編入学、院進、修了して2024年の4月から社会人をしています。岐阜高専では電子制御工学科、大学では電気電子工学を専攻しました。昔からガンダムやコードギアス、ゲームが好きだったのもあって、電気電子系の専門に進んだのは今思えばごく自然なことだったと思います。やりたいことも特になかったので学生時代の経験を活かして、とりあえず現在は東京でITエンジニアとして働いています。
+	                    冗談はさておき、自己紹介に戻ります。私は中学校を出た後に岐阜高専に進学し、その後は東京の大学に編入学、院進、修了して2024年の4月から社会人をしています。岐阜高専では電子制御工学科、大学では電気電子工学を専攻しました。昔からガンダムやコードギアス、ゲームが好きだったのもあって、電気電子系の専門に進んだのは今思えばごく自然なことだったと思います。現在は学生時代の経験を活かして、東京でITエンジニアとして働いています。
 	                    <br><br>
-	                    これからどこへ行くかについてはまだ何も決めていません。全く働き方が変わっていく可能性もあるし、居住地が東京かそれ以外かも決まっていません。
+	                    これからどう生きていくかはまだ何も決めていません。全く働き方が変わっていく可能性もあるし、居住地が東京かそれ以外かも決まっていません。
 	                </p>
 	
 	            </section>
@@ -677,26 +709,26 @@ nngkhyt.github.io/
 	                
 	                <h3>個人サイト開設にいたった経緯</h3>
 	                <p>
-	                    ここからは個人サイト開設にいたった経緯を書いていきます。またこのサイト自体の存在意義についても書きたいと思います。
+	                    ここからは個人サイト開設にいたった経緯を書いていきます。またこのサイト自体の存在意義についても書きます。
 	                </p>
 	                
 	                <h4>なぜ個人サイトを開設したか(why)</h4>
 	                <p>
-	                    一番の理由は自分自身の記録をとりたいからです。少し関係のない話を挟みますが、今までは大学進学だとか就職だとかを短期的な目的としてそれに向かって生きていました。そして、就職を機にそういった追われる感覚からはいったん解放されました。解放されたことで安堵の感情が大部分でしたが、一方でこのままだとあっという間に人生が終わってしまいそうという焦燥感に襲われました。何か短期的な目標をもっていないと人間は同じような毎日を過ごすことになります。それが幸せか否かについては置いといて、同じような毎日は人間の体感時間を確実に短くします。
+	                    一番の理由は自分自身の記録をとりたいからです。少し関係のない話を挟みますが、今までは大学進学だとか就職だとかを短期的な目的としてそれに向かって生きていました。そして、就職を機にそういった追われる生活からはいったん解放されました。解放されたことで安堵の感情が大部分でした。一方でこのままではあっという間に人生が終わってしまいそうという焦燥感に襲われました。何か短期的な目標をもっていないと人間は同じような毎日を過ごすことになります。それが幸せか否かについては置いておいて、同じような毎日は人間の体感時間を確実に短くします。
 	                    <br><br>
-	                    自分はそれが嫌なので日々の記録をとることで自身の現状を把握し、目的の再確認と過去の振り返りができるプラットフォームが欲しくなりました。元々はX(旧Twitter)がその役割を務めていたのですが、Xの管理のしにくさと、生成AI技術によるWebサイト管理コストの低下により、個人サイトを開設することにしました。ちなみにXについてですが、大学院在学中の学会参加や学術論文執筆等で多忙の時期に、どうせ復活できるんでしょと一時的にアカウントを削除していたら、アカウントの存在ごと忘れてしまいそのまま復活できなくなって泣きました。
+	                    自分はそれにおびえているので日々の記録をとることで自身の現状を把握し、目的の再確認と過去の振り返りができるプラットフォームが欲しくなりました。元々はX(旧Twitter)がその役割を務めていたのですが、Xの管理のしにくさと、生成AI技術によるWebサイト管理コストの低下により、個人サイトを開設することにしました。ちなみにXについてですが、大学院在学中の学会参加や学術論文執筆等で多忙の時期に、どうせ復活できるんでしょと一時的にアカウントを削除してみました。そうしてみたらアカウントの存在ごと忘れてしまい、どうやら復活可能期間が過ぎてしまったのか、そのまま復活できなくなって泣きました。
 	                    フォローしていたのは主に岐阜高専時代の同級生でしたが、一気にみんなの近況が知れなくなってとても悲しいです。
 	
 	                </p>
 	                <h4>なにを記録していくか(what)</h4>
 	                <p>
 	                    まだ"自分自身の記録"という大まかな内容しか決まっていないのが現状です。旅行記を書くかもしれないし、技術ブログを書くかもしれないし、学習した内容のまとめを書くかもしれません。それはこの個人サイトが対外的に公開されることを目的としたものではなく、ただの自己満だからです。かつてマナブやイケハヤといった"ブロガー"が流行っていたころに「自分もアフィリエイトで稼げるのでは」と考えてブログを開設したこともありますが、今回の個人サイト開設にはそのような目的はありません。
-	                    まあ黒歴史のようなものです。当時はWordpressを用いてブログを書いていたのですが、この前業務でWordpressのホーム画面を見たときは黒歴史が蘇って、「ヴっ」となりました。
+	                    当時はWordpressを用いてブログを書いていたのですが、まあ黒歴史のようなものです。この前業務でWordpressのホーム画面を見たときは黒歴史が蘇って、「ヴっ」となりました。
 	                </p>
 	                <h4>どのように運用しているか(how)</h4>
 	                <p>
 	                    このサイトはGithub Pagesに全リソースを配置して公開しています。Githubアカウントがあれば誰でも無料でWebサイトをインターネット上に公開できるのでぜひ。詳細は<a href="https://prog-8.com/docs/github-pages" target="_blank">こちら</a>から。リンク先でHTML&CSSの基礎的な知識が必要と記載がありますが、生成AIを使えばコードを書かなくてもよいのでHTML&CSSの基礎的な知識がなくても大丈夫だと思います。
-	                    また、自分は構成管理ツールとして<a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree</a>と、画面装飾のために<a href="https://getbootstrap.jp/" target="_blank">Bootstrap</a>や<a href="https://fontawesome.com/" target="_blank">Font Awesome</a>を用いて運用しています。
+	                    また、自分は構成管理ツールとして<a href="https://www.sourcetreeapp.com/" target="_blank">Sourcetree</a>と、画面装飾のために<a href="https://getbootstrap.jp/" target="_blank">Bootstrap</a>や<a href="https://fontawesome.com/" target="_blank">Font Awesome</a>、<a href="https://fonts.google.com/">Google Fonts</a>を用いて運用しています。
 	                </p>
 	            </section>
 	            <section class="news-section" id="conclusion">
@@ -734,7 +766,7 @@ nngkhyt.github.io/
 	    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 	</head>
 	<body>
-	    <header class="bg-dark text-white text-center py-3">
+	    <header class="news-header text-center">
 	        <h1 class="cool-title">実数Kは存在しない</h1>
 	        <nav class="nav justify-content-center">
 	            <a class="nav-link text-white" href="../index.html">Home</a>
@@ -745,14 +777,112 @@ nngkhyt.github.io/
 	    </header>
 	    <section class="news-details py-5">
 	        <div class="container">
-	            <h2>News 2 Title</h2>
-	            <p>Date: 2024-05-15</p>
-	            <p>Details about news 2...</p>
-	            <p>Tags: <span class="badge badge-secondary">Tag1</span> <span class="badge badge-secondary">Tag3</span></p>
+	            <h2>Nintendo Switchのゲームを自動化する①</h2>
+	            <p class="text-muted">Date: 2024-08-31</p>
+	            <div class="content-links">
+	                <a href="#summary">はじめに</a>
+	                <a href="#what-is-Pokecon">Pokeconとはなにか</a>
+	                <a href="#setup">必要なものと最終的なセットアップのイメージ</a>
+	                <a href="#next">次の記事では</a>
+	            </div>
+	            <hr>
+	            <section class="news-section" id="summary">
+	                
+	                <h3>はじめに</h3>
+	                <p>
+	                    ゲーマーならばゲームのレベル上げやアイテム収集のためにひたすら時間をかけた経験があるはずです。当然、そのレベル上げやアイテム収集の時間もひとつのゲーム体験として楽しいのですが、
+	                    私のようにせっかちな人は「単純作業ばかりで前に進めない感じがもどかしい」と感じると思います。最近ではオンライン対戦が活発になっていることもあって、例えばポケモンの厳選や育成に時間をかけているゲーマーも多くいるようです。
+	                    この例で言うとオンライン対戦が本来の楽しみであるのに育成に時間をかけてしまう、なんとも「ゲームのためのゲーム」感が増してしまって興ざめしてしまうのではないかと思います。
+	                    <br><br>
+	                    じゃあ単純作業は自動化してしまおうというわけです。ゲーム自動化の歴史は浅くないのですが、ゲーム自動化に取り組むゲーマーの根底には今も昔もこの考えがあると思います。そして自分もその1人です。とりあえずはポピュラーなゲームハードであるNintendoSwitchの自動化から取り組もうということで、昨年2023年の12月ごろにDQM3(ドラゴンクエストモンスターズ3 - Nintendo Switch)
+	                    のモンスター自動収集(モグダン自動周回)プログラムを作成して動作確認するところまでをPokeconというプラットフォームを用いて実施しました。私は学生時代に電気電子系の専攻でしたが、ゲーム自動化の領域は初めての試みであったというのもあってそれなりに苦戦したので、どのように環境構築をしたのか、どのようにプログラムを作成すればよいのか、
+	                    そもそもPokeconや環境構築の情報をどう収集したのかについて自分なりにまとめたいと思い、この記事を書いています。
+	                    <br><br>
+	                    内容が多くなりそうなのでいくつかの記事に分けて書いていきます。まずこの記事では
+	                    <ul>
+	                        <li>Pokeconとはなにか (what)</li>
+	                        <li>必要なものと最終的なセットアップのイメージ (how)</li>
+	                    </ul>
+	                    について書きたいと思います。より具体的な環境構築の手順については今後記事にする予定です。インターネット上には似たような記事は他にたくさんあると思いますが、あくまでも現時点での自分用のメモかつ環境構築手順として書き留めたレベルの記事なのでご容赦ください(「この日付時点でこの手順で環境構築できたよー」みたいな記事はあってもいいと思う…)。
+	            </section>
+	            <section class="news-section" id="what-is-Pokecon">
+	                
+	                <h3>Pokeconとはなにか</h3>
+	                <p>
+	                    PokeconとはPoke-Controlerの略称であり、Kawaswitch氏により開発されたPythonによるNintendoSwitch自動化プラットフォームです。名前からある程度察することができますが、ポケモン界隈のゲーマーが
+	                    日本におけるNintendo Switchゲーム自動化の発展に寄与しました。また、Pokeconをはじめ、Nintendo Switchゲームの自動化が盛り上がる機転となったのは2017/06/20のNintendo Switchの本体更新ver.3.0.0です。この本体更新配信では
+	                    <ul>
+	                        <li>『他社製のコントローラー（任天堂ライセンス商品）に対応しました。 - Nintendo SwitchドックのUSB端子に接続することで使用できます。』</li>
+	                    </ul>
+	                    とあります。これによりArduinoやteensyといったマイコンをコントローラであると認識させて、マイコンにプログラムを実装することでNintendo Switchゲームの自動化が実現されるようになりました。
+	                    <br><br>
+	                    KawaSwitch氏による本家Pokeconのアップデートは止まっているようですが、現在でも有志による改良が続いておりPokecon ModifiedやPokecon Modified Extensionといった
+	                    名前で派生しています。参考までに、下図は自分のPCで構築したPokeconの画面です(Poke-Controler Modified Extension ver 0.0.6)。右上中にログ出力ウィンドウ、右下に簡易的なコントローラ、左上から真ん中にかけてキャプチャしたゲーム画面、左下はカメラの設定やコマンドの実行がタブごとに管理されています。
+	                    月日を重ねて改良が続いていることもあって、デザイン的にも洗練されています。
+	                    <br><br>
+	                    <img src="../images/news/news_2/PokeconSampleImg.webp" class="responsive-image">
+	                    <br><br>
+	                    じゃあこれ使ってどうやってゲームを自動化するのかというと、このPokeconが参照しているローカルディレクトリのCommandsフォルダ内に、作成したPythonファイルを配置して、Pokecon左下のCommandsタブ内から作成したPythonファイルを選択して実行ボタンをポチッとするだけです。
+	                    つまり、Pokeconの環境構築さえ完了してしまえばあとは簡単。Pythonファイルを作って指定の場所に置くだけでいいわけです。したがって、PokeconによるNintendo Switchゲーム自動化の一番のハードルは環境構築だったりします。
+	                </p>
+	            </section>
+	            <section class="news-section" id="setup">
+	                <h3>必要なものと最終的なセットアップのイメージ</h3>
+	                <p>
+	                    Nintendo Switchのゲームの自動化に必要なものを以下に示します。
+	                    <ul>
+	                        <li>Nintendo Switch</li>
+	                        <li>Nintendo Switch ドック</li>
+	                        <li>PC</li>
+	                        <li>キャプチャボード</li>
+	                        <li>Arduino Leonardo(or 互換品)</li>
+	                        <li>FTDI TTL USBシリアル変換アダプター</li>
+	                        <li>ジャンプワイヤ</li>
+	                        <li>USB Type-A - USB Type-Aケーブル</li>
+	                        <li>Micro USB Type-B - USB Type-Aケーブル</li>
+	                        <li>HDMIケーブル</li>
+	                        <li>AC電源(PC・Nintendo Switch用)</li>
+	                        <li>(USBハブ)なくてもいいけどマウスとかで色々USB端子圧迫すると思うので。</li>
+	                    </ul>
+	
+	                    Arduino Leonardoについてですが、互換品でも可です。というのもArduinoはオープンソースハードウェアなので互換品が多数存在しており、やや高価な純正品を買うよりかは互換品で十分だったりします。
+	                    実際に私が使用したマイコンもArduino Leonardoの互換品である<a href="https://www.amazon.co.jp/dp/B0786LJQ8K?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">KEYESTUDIO 5V Leonardo R3開発ボード+ USBケーブル</a>です。
+	                    心配であれば商品詳細にATmega32u4と書いてあるかを確認してください。ATmega32u4であればOKです。
+	                    また、一般的に普及しているArduino UNOを選ばないようにしてください。
+	                    ArduinoでコントローラをエミュレートするにはUSB HID機能が必要です。そのため、USB HID機能を持たないマイコンボードは使用できません。
+	                    Leonardo(ATmega32u4)はArduinoの標準ライブラリにUSB HID機能が含まれているため、
+	                    簡単に扱うことができますが、UNO(ATmega328)にはそもそも標準ライブラリにHID機能がありません。
+	                    <br><br>
+	                    続いて、最終的なセットアップのイメージを下図に示します。先ほど列挙したNintendo Switchゲーム自動化に必要なものをこのように接続してください。
+	                    ここで注意してほしいのはFTDI TTL USBシリアル変換アダプターとマイコンの接続端子です。3本のジャンプワイヤを用いて両者を接続するのですが、下記のように接続するようにしてください。
+	                    <ul>
+	                        <li>変換アダプター側 RXD端子 ⇔ マイコン側のTX端子</li>
+	                        <li>変換アダプター側 TXD端子 ⇔ マイコン側のRX端子</li>
+	                        <li>変換アダプター側 GND端子 ⇔ マイコン側のGND端子</li>
+	                    </ul>
+	                    このように接続することでPCからの信号をマイコン側に送信できます。
+	                    <br><br>
+	                    <img src="../images/news/news_2/setup.png" class="responsive-image">
+	                    <br><br>
+	                </p>
+	            </section>
+	            <section class="news-section" id="next">
+	            <h3>次の記事では</h3>
+	            次の記事では環境構築に入っていきます。具体的には、
+	            <ul>
+	                <li>機器の接続</li>
+	                <li>Arduino IDEのインストールと設定</li>
+	                <li>コードエディタのインストールと拡張機能の導入</li>
+	                <li>Pokeconのインストールと動作確認</li>
+	            </ul>
+	            を書く予定です。長い記事になりそうですが、環境構築をひとつの記事にまとめたいのでご容赦ください。
+	            </section>
+	            <hr>
+	            <p>Tags: <span class="badge badge-secondary">GameAutomation</span></p>
 	        </div>
 	    </section>
 	    <footer class="bg-dark text-white text-center py-3">
-	        <p>&copy; 2024 実数Kは存在しない</p>
+	        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
 	    </footer>
 	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

@@ -1,10 +1,13 @@
 /* Google Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400&display=swap');
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16:wght@400&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IBM Plex Sans JP', sans-serif;
     background-color: #f8f9fa;
     color: #343a40;
+    font-weight: 400; /* 標準のフォントウェイトを指定 */
 }
 
 header {
@@ -95,6 +98,14 @@ img.rounded-circle {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.responsive-image {
+    max-width: 100%; /* 画像が親要素の幅に合わせて縮小するように設定 */
+    height: auto;    /* 画像の縦横比を保ったまま高さを自動調整 */
+        
+    display: block; /* インライン要素をブロック要素に変換 */
+    margin: 0 auto; /* 上下左右のマージンを自動で設定し、中央揃えにする */
+}
+
 .section-title {
     text-align: center;
     margin-bottom: 30px;
@@ -167,9 +178,8 @@ img.rounded-circle {
 }
 
 /* Updated styles for the cool-title */
-/* Updated styles for the cool-title with rounded corners */
 .cool-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DotGothic16', sans-serif; /* DotGothic16 フォントを指定 */
     color: #fff;
     background: linear-gradient(90deg, #ffcccb, #ffcccb); /* Light pink gradient */
     -webkit-background-clip: text;
@@ -184,3 +194,4 @@ img.rounded-circle {
     padding: 10px; /* Optional: Adjust padding to suit the rounded corners */
     background-color: #ffcccb; /* Add background color for rounded effect */
 }
+

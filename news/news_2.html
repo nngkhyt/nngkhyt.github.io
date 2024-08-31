@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
+    <header class="news-header text-center">
         <h1 class="cool-title">実数Kは存在しない</h1>
         <nav class="nav justify-content-center">
             <a class="nav-link text-white" href="../index.html">Home</a>
@@ -20,14 +20,112 @@
     </header>
     <section class="news-details py-5">
         <div class="container">
-            <h2>News 2 Title</h2>
-            <p>Date: 2024-05-15</p>
-            <p>Details about news 2...</p>
-            <p>Tags: <span class="badge badge-secondary">Tag1</span> <span class="badge badge-secondary">Tag3</span></p>
+            <h2>Nintendo Switchのゲームを自動化する①</h2>
+            <p class="text-muted">Date: 2024-08-31</p>
+            <div class="content-links">
+                <a href="#summary">はじめに</a>
+                <a href="#what-is-Pokecon">Pokeconとはなにか</a>
+                <a href="#setup">必要なものと最終的なセットアップのイメージ</a>
+                <a href="#next">次の記事では</a>
+            </div>
+            <hr>
+            <section class="news-section" id="summary">
+                
+                <h3>はじめに</h3>
+                <p>
+                    ゲーマーならばゲームのレベル上げやアイテム収集のためにひたすら時間をかけた経験があるはずです。当然、そのレベル上げやアイテム収集の時間もひとつのゲーム体験として楽しいのですが、
+                    私のようにせっかちな人は「単純作業ばかりで前に進めない感じがもどかしい」と感じると思います。最近ではオンライン対戦が活発になっていることもあって、例えばポケモンの厳選や育成に時間をかけているゲーマーも多くいるようです。
+                    この例で言うとオンライン対戦が本来の楽しみであるのに育成に時間をかけてしまう、なんとも「ゲームのためのゲーム」感が増してしまって興ざめしてしまうのではないかと思います。
+                    <br><br>
+                    じゃあ単純作業は自動化してしまおうというわけです。ゲーム自動化の歴史は浅くないのですが、ゲーム自動化に取り組むゲーマーの根底には今も昔もこの考えがあると思います。そして自分もその1人です。とりあえずはポピュラーなゲームハードであるNintendoSwitchの自動化から取り組もうということで、昨年2023年の12月ごろにDQM3(ドラゴンクエストモンスターズ3 - Nintendo Switch)
+                    のモンスター自動収集(モグダン自動周回)プログラムを作成して動作確認するところまでをPokeconというプラットフォームを用いて実施しました。私は学生時代に電気電子系の専攻でしたが、ゲーム自動化の領域は初めての試みであったというのもあってそれなりに苦戦したので、どのように環境構築をしたのか、どのようにプログラムを作成すればよいのか、
+                    そもそもPokeconや環境構築の情報をどう収集したのかについて自分なりにまとめたいと思い、この記事を書いています。
+                    <br><br>
+                    内容が多くなりそうなのでいくつかの記事に分けて書いていきます。まずこの記事では
+                    <ul>
+                        <li>Pokeconとはなにか (what)</li>
+                        <li>必要なものと最終的なセットアップのイメージ (how)</li>
+                    </ul>
+                    について書きたいと思います。より具体的な環境構築の手順については今後記事にする予定です。インターネット上には似たような記事は他にたくさんあると思いますが、あくまでも現時点での自分用のメモかつ環境構築手順として書き留めたレベルの記事なのでご容赦ください(「この日付時点でこの手順で環境構築できたよー」みたいな記事はあってもいいと思う…)。
+            </section>
+            <section class="news-section" id="what-is-Pokecon">
+                
+                <h3>Pokeconとはなにか</h3>
+                <p>
+                    PokeconとはPoke-Controlerの略称であり、Kawaswitch氏により開発されたPythonによるNintendoSwitch自動化プラットフォームです。名前からある程度察することができますが、ポケモン界隈のゲーマーが
+                    日本におけるNintendo Switchゲーム自動化の発展に寄与しました。また、Pokeconをはじめ、Nintendo Switchゲームの自動化が盛り上がる機転となったのは2017/06/20のNintendo Switchの本体更新ver.3.0.0です。この本体更新配信では
+                    <ul>
+                        <li>『他社製のコントローラー（任天堂ライセンス商品）に対応しました。 - Nintendo SwitchドックのUSB端子に接続することで使用できます。』</li>
+                    </ul>
+                    とあります。これによりArduinoやteensyといったマイコンをコントローラであると認識させて、マイコンにプログラムを実装することでNintendo Switchゲームの自動化が実現されるようになりました。
+                    <br><br>
+                    KawaSwitch氏による本家Pokeconのアップデートは止まっているようですが、現在でも有志による改良が続いておりPokecon ModifiedやPokecon Modified Extensionといった
+                    名前で派生しています。参考までに、下図は自分のPCで構築したPokeconの画面です(Poke-Controler Modified Extension ver 0.0.6)。右上中にログ出力ウィンドウ、右下に簡易的なコントローラ、左上から真ん中にかけてキャプチャしたゲーム画面、左下はカメラの設定やコマンドの実行がタブごとに管理されています。
+                    月日を重ねて改良が続いていることもあって、デザイン的にも洗練されています。
+                    <br><br>
+                    <img src="../images/news/news_2/PokeconSampleImg.png" class="responsive-image">
+                    <br><br>
+                    じゃあこれ使ってどうやってゲームを自動化するのかというと、このPokeconが参照しているローカルディレクトリのCommandsフォルダ内に、作成したPythonファイルを配置して、Pokecon左下のCommandsタブ内から作成したPythonファイルを選択して実行ボタンをポチッとするだけです。
+                    つまり、Pokeconの環境構築さえ完了してしまえばあとは簡単。Pythonファイルを作って指定の場所に置くだけでいいわけです。したがって、PokeconによるNintendo Switchゲーム自動化の一番のハードルは環境構築だったりします。
+                </p>
+            </section>
+            <section class="news-section" id="setup">
+                <h3>必要なものと最終的なセットアップのイメージ</h3>
+                <p>
+                    Nintendo Switchのゲームの自動化に必要なものを以下に示します。
+                    <ul>
+                        <li>Nintendo Switch</li>
+                        <li>Nintendo Switch ドック</li>
+                        <li>PC</li>
+                        <li>キャプチャボード</li>
+                        <li>Arduino Leonardo(or 互換品)</li>
+                        <li>FTDI TTL USBシリアル変換アダプター</li>
+                        <li>ジャンプワイヤ</li>
+                        <li>USB Type-A - USB Type-Aケーブル</li>
+                        <li>Micro USB Type-B - USB Type-Aケーブル</li>
+                        <li>HDMIケーブル</li>
+                        <li>AC電源(PC・Nintendo Switch用)</li>
+                        <li>(USBハブ)なくてもいいけどマウスとかで色々USB端子圧迫すると思うので。</li>
+                    </ul>
+
+                    Arduino Leonardoについてですが、互換品でも可です。というのもArduinoはオープンソースハードウェアなので互換品が多数存在しており、やや高価な純正品を買うよりかは互換品で十分だったりします。
+                    実際に私が使用したマイコンもArduino Leonardoの互換品である<a href="https://www.amazon.co.jp/dp/B0786LJQ8K?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">KEYESTUDIO 5V Leonardo R3開発ボード+ USBケーブル</a>です。
+                    心配であれば商品詳細にATmega32u4と書いてあるかを確認してください。ATmega32u4であればOKです。
+                    また、一般的に普及しているArduino UNOを選ばないようにしてください。
+                    ArduinoでコントローラをエミュレートするにはUSB HID機能が必要です。そのため、USB HID機能を持たないマイコンボードは使用できません。
+                    Leonardo(ATmega32u4)はArduinoの標準ライブラリにUSB HID機能が含まれているため、
+                    簡単に扱うことができますが、UNO(ATmega328)にはそもそも標準ライブラリにHID機能がありません。
+                    <br><br>
+                    続いて、最終的なセットアップのイメージを下図に示します。先ほど列挙したNintendo Switchゲーム自動化に必要なものをこのように接続してください。
+                    ここで注意してほしいのはFTDI TTL USBシリアル変換アダプターとマイコンの接続端子です。3本のジャンプワイヤを用いて両者を接続するのですが、下記のように接続するようにしてください。
+                    <ul>
+                        <li>変換アダプター側 RXD端子 ⇔ マイコン側のTX端子</li>
+                        <li>変換アダプター側 TXD端子 ⇔ マイコン側のRX端子</li>
+                        <li>変換アダプター側 GND端子 ⇔ マイコン側のGND端子</li>
+                    </ul>
+                    このように接続することでPCからの信号をマイコン側に送信できます。
+                    <br><br>
+                    <img src="../images/news/news_2/setup.png" class="responsive-image">
+                    <br><br>
+                </p>
+            </section>
+            <section class="news-section" id="next">
+            <h3>次の記事では</h3>
+            次の記事では環境構築に入っていきます。具体的には、
+            <ul>
+                <li>機器の接続</li>
+                <li>Arduino IDEのインストールと設定</li>
+                <li>コードエディタのインストールと拡張機能の導入</li>
+                <li>Pokeconのインストールと動作確認</li>
+            </ul>
+            を書く予定です。長い記事になりそうですが、環境構築をひとつの記事にまとめたいのでご容赦ください。
+            </section>
+            <hr>
+            <p>Tags: <span class="badge badge-secondary">GameAutomation</span></p>
         </div>
     </section>
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 実数Kは存在しない</p>
+        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
