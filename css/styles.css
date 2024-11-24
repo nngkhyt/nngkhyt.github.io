@@ -148,7 +148,9 @@ img.rounded-circle {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
-
+.news-section h4 {
+    text-decoration: underline;
+}
 .news-footer {
     background: #f8f9fa;
     padding: 20px 0;
