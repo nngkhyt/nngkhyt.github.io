@@ -77,6 +77,59 @@ function resetFilters() {
     filterNews();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    updateTagStyles();
+
+document.addEventListener('DOMContentLoaded', function () {
+    populateIngredientDropdown();
 });
+
+function populateIngredientDropdown() {
+    const recipeItems = document.querySelectorAll('.recipe-item');
+    const ingredientSet = new Set();
+
+    // レシピから材料を抽出
+    recipeItems.forEach(item => {
+        const ingredients = item.getAttribute('data-ingredients').split(' ');
+        ingredients.forEach(ingredient => ingredientSet.add(ingredient.trim()));
+    });
+
+    // 材料を配列に変換してあいうえお順にソート
+    const sortedIngredients = Array.from(ingredientSet).sort((a, b) => a.localeCompare(b, 'ja'));
+
+    const dropdownMenu = document.getElementById('ingredientDropdownMenu');
+    sortedIngredients.forEach(ingredient => {
+        const checkbox = document.createElement('div');
+        checkbox.className = 'form-check';
+        checkbox.innerHTML = `
+            <input class="form-check-input" type="checkbox" value="${ingredient}" id="ingredient-${ingredient}">
+            <label class="form-check-label" for="ingredient-${ingredient}">${ingredient}</label>
+        `;
+        dropdownMenu.appendChild(checkbox);
+    });
+}
+
+
+function filterRecipes() {
+    const selectedIngredients = Array.from(document.querySelectorAll('#ingredientDropdownMenu .form-check-input:checked')).map(input => input.value.toLowerCase());
+    const searchType = document.querySelector('input[name="searchType"]:checked').value;
+    const recipeItems = document.querySelectorAll('.recipe-item');
+
+    recipeItems.forEach(item => {
+        const itemIngredients = item.getAttribute('data-ingredients').toLowerCase().split(' ');
+        const matches = selectedIngredients.map(ingredient => itemIngredients.includes(ingredient));
+
+        const shouldDisplay =
+            searchType === 'AND' ? matches.every(match => match) : matches.some(match => match);
+
+        item.style.display = shouldDisplay ? 'block' : 'none';
+    });
+}
+
+function resetRecipeFilters() {
+    const checkboxes = document.querySelectorAll('#ingredientDropdownMenu .form-check-input');
+    checkboxes.forEach(checkbox => (checkbox.checked = false));
+
+    document.getElementById('andSearch').checked = true; // AND検索をデフォルトに
+    const recipeItems = document.querySelectorAll('.recipe-item');
+    recipeItems.forEach(item => (item.style.display = 'block'));
+}
+

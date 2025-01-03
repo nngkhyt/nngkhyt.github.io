@@ -104,6 +104,10 @@ img.rounded-circle {
         
     display: block; /* インライン要素をブロック要素に変換 */
     margin: 0 auto; /* 上下左右のマージンを自動で設定し、中央揃えにする */
+    /* 以下のスタイルを追加して幅や高さを調整 */
+    width: 80%;      /* 必要に応じて画像の幅を指定 */
+    max-height: 500px; /* 必要に応じて最大高さを指定 */
+    object-fit: contain; /* 画像が収まるように調整 */
 }
 
 .section-title {
@@ -197,6 +201,39 @@ img.rounded-circle {
     background-color: #ffcccb; /* Add background color for rounded effect */
 }
 
+.recipe-item {
+    display: block;
+}
+
+#ingredientDropdown {
+    width: 300px;
+    height: auto;
+}
+
+.dropdown-menu {
+    max-height: 300px; /* 必要に応じて高さを調整 */
+    overflow-y: auto;
+    width: 100%; /* ドロップダウンの幅をボタンに合わせる */
+}
+
+/* チェックボックスの親要素をフレックスボックスとして設定 */
+#ingredientDropdownMenu .form-check {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px; /* チェックボックスとラベルの間隔を調整 */
+    padding: 5px 10px;
+}
+
+#ingredientDropdownMenu .form-check-input {
+    margin: 0; /* 余白をリセット */
+    flex-shrink: 0; /* サイズ縮小を防止 */
+    transform: scale(1.5);
+}
+
+#ingredientDropdownMenu .form-check-label {
+    text-align: left; /* ラベルのテキストを左揃え */
+    flex-grow: 1; /* ラベルが幅を適切に取るように設定 */
 .video-container {
     position: relative;
     width: 100%; /* 親要素の幅にフィット */
