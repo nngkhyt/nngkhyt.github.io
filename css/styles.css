@@ -226,9 +226,13 @@ img.rounded-circle {
 }
 
 #ingredientDropdownMenu .form-check-input {
-    margin: 0; /* 余白をリセット */
-    flex-shrink: 0; /* サイズ縮小を防止 */
-    transform: scale(1.5);
+    display: none;
+}
+#ingredientDropdownMenu .form-check-input:checked + .form-check-label {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 #ingredientDropdownMenu .form-check-label {
