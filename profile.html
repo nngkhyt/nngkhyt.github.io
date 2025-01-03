@@ -1,80 +1,165 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>実数Kは存在しない</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="bg-dark text-white text-center py-3">
-        <h1 class="cool-title">実数Kは存在しない</h1>
-        <nav class="nav justify-content-center">
-            <a class="nav-link text-white" href="index.html">Home</a>
-            <a class="nav-link text-white" href="news.html">News</a>
-            <a class="nav-link text-white" href="recipes.html">Recipe</a>
-            <a class="nav-link text-white" href="profile.html">Profile</a>
-            <a class="nav-link text-white" href="links.html">Link</a>
-        </nav>
+      <h1 class="cool-title">実数Kは存在しない</h1>
+      <nav class="nav justify-content-center">
+        <a class="nav-link text-white" href="index.html">Home</a>
+        <a class="nav-link text-white" href="news.html">News</a>
+        <a class="nav-link text-white" href="recipes.html">Recipe</a>
+        <a class="nav-link text-white" href="profile.html">Profile</a>
+        <a class="nav-link text-white" href="links.html">Link</a>
+      </nav>
     </header>
     <section class="profile py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">プロフィール</h2>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="images/profile/UnknownIcon.png" alt="Profile Photo" class="img-fluid rounded-circle mb-3 shadow">
-                </div>
-                <div class="col-md-8">
-                    <h3>Hayato Nonogaki / 野々垣 颯人</h3>
-                    <h4 class="mt-4">経歴</h4>
-                    <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item">2015年4月 岐阜工業高等専門学校 電子制御工学科 入学</li>
-                        <li class="list-group-item">2020年3月 岐阜工業高等専門学校 電子制御工学科 卒業</li>
-                        <li class="list-group-item">2020年4月 東京農工大学 工学部 電気電子工学科 編入学</li>
-                        <li class="list-group-item">2022年3月 東京農工大学 工学部 電気電子工学科 卒業</li>
-                        <li class="list-group-item">2022年4月 東京農工大学 工学府 電気電子工学専攻 入学</li>
-                        <li class="list-group-item">2024年3月 東京農工大学 工学府 電気電子工学専攻 修了</li>
-                        <li class="list-group-item">2024年4月 ITエンジニアとして就職</li>
-                    </ul>
-                    <h4 class="mt-4">趣味・興味</h4>
-                    <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item">野球観戦</li>
-                        <li class="list-group-item">旅行</li>
-                        <li class="list-group-item">美味しいものを食べること</li>
-                        <li class="list-group-item">ソフトテニス</li>
-                    </ul>
-                    <h4 class="mt-4">スキル</h4>
-                    <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item">Python</li>
-                        <li class="list-group-item">C</li>
-                        <li class="list-group-item">HTML&CSS (少しだけ)</li>
-                    </ul>
-                    <h4 class="mt-4">研究活動</h4>
-                    <h5>論文</h5>
-                    <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item"><a href="https://ieeexplore.ieee.org/document/10473674" target="_blank">Brillouin frequency shift estimation for Brillouin optical time domain analysis using Brillouin gain and loss spectra with SVC, Hayato Nonogaki, Kazuki Hoshino, Daiki Saito, Mohd Saiful Dzulkefly Bin Zan, Yosuke Tanaka IEEE Sensors Journal 24(9) 14261-14269 2024年5月1日</a></li>
-                        <li class="list-group-item"><a href="https://iopscience.iop.org/article/10.35848/1882-0786/ad422f" target="_blank">Brillouin frequency shift measurement by zero-crossing point search in virtually synthesized spectra of Brillouin gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Zan, Yosuke Tanaka Applied Physics Express 17(5) 052003-052003 2024年5月15日</a></li>
-                    </ul>
-                    <h5>口頭発表</h5>
-                    <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item"><a href="https://opg.optica.org/abstract.cfm?uri=Sensors-2022-SM2C.6" target="_blank">Distributed strain sensing with simple system based on slope-assisted BOTDA using both gain and loss spectra, Hayato Nonogaki, Daiki Saito, Kazuki Hoshino, Yosuke Tanaka, Optical Sensors and Sensing Congress 2022年7月11日</a></li>
-                        <li class="list-group-item"><a href="https://pub.confit.atlas.jp/ja/event/jsap2023a/presentation/23p-A308-5" target="_blank">ブリルアン利得・損失スペクトルを用いたサポートベクタ分類によるブリルアン周波数シフトの推定, 野々垣 颯人, 清 大地, 田中 洋介 第84回応用物理学会秋季学術講演会 2023年9月23日</a></li>
-                        <li class="list-group-item"><a href="https://ken.ieice.org/ken/paper/202310123CXk/" target="_blank">ブリルアン利得と損失の仮想合成スペクトルのゼロクロス点探索によるブリルアン周波数シフト測定, 野々垣 颯人, 清 大地, Mohd Saiful Dzulkefly Bin Zan, 田中洋介 電子情報通信学会 光ファイバ応用技術研究会（OFT） 2023年10月12日</a></li>
-                        <li class="list-group-item"><a href="https://opg.optica.org/abstract.cfm?uri=OFS-2023-Tu3.85" target="_blank">Fast Brillouin frequency shift measurement by zero-crossing point search in the virtually composed spectra of Brillouin gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Bin Zan, Yosuke Tanaka 28-th International Conference on Optical Fiber Sensors (OFS-28) 2023年11月21日</a></li>
-                    </ul>
-                    <h4 class="mt-4">お問い合わせ</h4>
-                    <p><a href="https://forms.gle/iX57GcxcSSSLzFdJ7" class="btn btn-primary" target="_blank">Google フォーム</a></p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="text-center mb-4">プロフィール</h2>
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <img
+              src="images/profile/UnknownIcon.png"
+              alt="Profile Photo"
+              class="img-fluid rounded-circle mb-3 shadow"
+            />
+          </div>
+          <div class="col-md-8">
+            <h3>Hayato Nonogaki / 野々垣 颯人</h3>
+            <h4 class="mt-4">経歴</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">
+                2015年4月 岐阜工業高等専門学校 電子制御工学科 入学
+              </li>
+              <li class="list-group-item">
+                2020年3月 岐阜工業高等専門学校 電子制御工学科 卒業
+              </li>
+              <li class="list-group-item">
+                2020年4月 東京農工大学 工学部 電気電子工学科 編入学
+              </li>
+              <li class="list-group-item">
+                2022年3月 東京農工大学 工学部 電気電子工学科 卒業
+              </li>
+              <li class="list-group-item">
+                2022年4月 東京農工大学 工学府 電気電子工学専攻 入学
+              </li>
+              <li class="list-group-item">
+                2024年3月 東京農工大学 工学府 電気電子工学専攻 修了
+              </li>
+              <li class="list-group-item">2024年4月 ITエンジニアとして就職</li>
+            </ul>
+            <h4 class="mt-4">趣味・興味</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">野球観戦</li>
+              <li class="list-group-item">旅行</li>
+              <li class="list-group-item">美味しいものを食べること</li>
+              <li class="list-group-item">ソフトテニス</li>
+            </ul>
+            <h4 class="mt-4">スキル</h4>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">Python</li>
+              <li class="list-group-item">C</li>
+              <li class="list-group-item">HTML&CSS (少しだけ)</li>
+            </ul>
+            <h4 class="mt-4">研究活動</h4>
+            <h5>論文</h5>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">
+                <a
+                  href="https://ieeexplore.ieee.org/document/10473674"
+                  target="_blank"
+                  >Brillouin frequency shift estimation for Brillouin optical
+                  time domain analysis using Brillouin gain and loss spectra
+                  with SVC, Hayato Nonogaki, Kazuki Hoshino, Daiki Saito, Mohd
+                  Saiful Dzulkefly Bin Zan, Yosuke Tanaka IEEE Sensors Journal
+                  24(9) 14261-14269 2024年5月1日</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://iopscience.iop.org/article/10.35848/1882-0786/ad422f"
+                  target="_blank"
+                  >Brillouin frequency shift measurement by zero-crossing point
+                  search in virtually synthesized spectra of Brillouin gain and
+                  loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful Dzulkefly Zan,
+                  Yosuke Tanaka Applied Physics Express 17(5) 052003-052003
+                  2024年5月15日</a
+                >
+              </li>
+            </ul>
+            <h5>口頭発表</h5>
+            <ul class="list-group list-group-flush mb-4">
+              <li class="list-group-item">
+                <a
+                  href="https://opg.optica.org/abstract.cfm?uri=Sensors-2022-SM2C.6"
+                  target="_blank"
+                  >Distributed strain sensing with simple system based on
+                  slope-assisted BOTDA using both gain and loss spectra, Hayato
+                  Nonogaki, Daiki Saito, Kazuki Hoshino, Yosuke Tanaka, Optical
+                  Sensors and Sensing Congress 2022年7月11日</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://pub.confit.atlas.jp/ja/event/jsap2023a/presentation/23p-A308-5"
+                  target="_blank"
+                  >ブリルアン利得・損失スペクトルを用いたサポートベクタ分類によるブリルアン周波数シフトの推定,
+                  野々垣 颯人, 清 大地, 田中 洋介
+                  第84回応用物理学会秋季学術講演会 2023年9月23日</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://ken.ieice.org/ken/paper/202310123CXk/"
+                  target="_blank"
+                  >ブリルアン利得と損失の仮想合成スペクトルのゼロクロス点探索によるブリルアン周波数シフト測定,
+                  野々垣 颯人, 清 大地, Mohd Saiful Dzulkefly Bin Zan, 田中洋介
+                  電子情報通信学会 光ファイバ応用技術研究会（OFT）
+                  2023年10月12日</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="https://opg.optica.org/abstract.cfm?uri=OFS-2023-Tu3.85"
+                  target="_blank"
+                  >Fast Brillouin frequency shift measurement by zero-crossing
+                  point search in the virtually composed spectra of Brillouin
+                  gain and loss, Hayato Nonogaki, Daichi Sei, Mohd Saiful
+                  Dzulkefly Bin Zan, Yosuke Tanaka 28-th International
+                  Conference on Optical Fiber Sensors (OFS-28) 2023年11月21日</a
+                >
+              </li>
+            </ul>
+            <h4 class="mt-4">お問い合わせ</h4>
+            <p>
+              <a
+                href="https://forms.gle/iX57GcxcSSSLzFdJ7"
+                class="btn btn-primary"
+                target="_blank"
+                >Google フォーム</a
+              >
+            </p>
+          </div>
         </div>
+      </div>
     </section>
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
+      <p>&copy; 2024 nngkhyt. All rights reserved.</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>

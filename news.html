@@ -1,122 +1,207 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>実数Kは存在しない</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="bg-dark text-white text-center py-3">
-        <h1 class="cool-title">実数Kは存在しない</h1>
-        <nav class="nav justify-content-center">
-            <a class="nav-link text-white" href="index.html">Home</a>
-            <a class="nav-link text-white" href="news.html">News</a>
-            <a class="nav-link text-white" href="recipes.html">Recipe</a>
-            <a class="nav-link text-white" href="profile.html">Profile</a>
-            <a class="nav-link text-white" href="links.html">Link</a>
-        </nav>
+      <h1 class="cool-title">実数Kは存在しない</h1>
+      <nav class="nav justify-content-center">
+        <a class="nav-link text-white" href="index.html">Home</a>
+        <a class="nav-link text-white" href="news.html">News</a>
+        <a class="nav-link text-white" href="recipes.html">Recipe</a>
+        <a class="nav-link text-white" href="profile.html">Profile</a>
+        <a class="nav-link text-white" href="links.html">Link</a>
+      </nav>
     </header>
     <section class="news-search py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">記事を検索する</h2>
-            <form class="form-inline justify-content-center" onsubmit="event.preventDefault(); filterNews();">
-                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <select id="yearSelect" class="form-control mr-sm-2">
-                    <option value="">年</option>
-                    <option value="2024">2024</option>
-                    <option value="2023">2023</option>
-                </select>
-                <select id="monthSelect" class="form-control mr-sm-2">
-                    <option value="">月</option>
-                    <option value="01">January</option>
-                    <option value="02">February</option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">検索</button>
-                <button id="resetButton" class="btn btn-outline-secondary my-2 my-sm-0" type="button" onclick="resetFilters()">リセット</button>
-            </form>
-        </div>
+      <div class="container">
+        <h2 class="text-center mb-4">記事を検索する</h2>
+        <form
+          class="form-inline justify-content-center"
+          onsubmit="event.preventDefault(); filterNews();"
+        >
+          <input
+            id="searchInput"
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <select id="yearSelect" class="form-control mr-sm-2">
+            <option value="">年</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+          <select id="monthSelect" class="form-control mr-sm-2">
+            <option value="">月</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <button
+            id="searchButton"
+            class="btn btn-outline-success my-2 my-sm-0 mr-2"
+            type="submit"
+          >
+            検索
+          </button>
+          <button
+            id="resetButton"
+            class="btn btn-outline-secondary my-2 my-sm-0"
+            type="button"
+            onclick="resetFilters()"
+          >
+            リセット
+          </button>
+        </form>
+      </div>
     </section>
     <section class="news-tags py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">タグで絞り込む</h2>
-            <div class="row justify-content-center">
-                <button id="tagAll" class="btn btn-outline-secondary m-2" onclick="setTag('All')">All</button>
-                <button id="tagGeneral" class="btn btn-outline-secondary m-2" onclick="setTag('General')">General</button>
-                <button id="tagAboutMe" class="btn btn-outline-secondary m-2" onclick="setTag('AboutMe')">AboutMe</button>
-                <button id="tagGameAutomation" class="btn btn-outline-secondary m-2" onclick="setTag('GameAutomation')">GameAutomation</button>
-                <button id="tagGameAutomation" class="btn btn-outline-secondary m-2" onclick="setTag('Money')">Money</button>
-            </div>
+      <div class="container">
+        <h2 class="text-center mb-4">タグで絞り込む</h2>
+        <div class="row justify-content-center">
+          <button
+            id="tagAll"
+            class="btn btn-outline-secondary m-2"
+            onclick="setTag('All')"
+          >
+            All
+          </button>
+          <button
+            id="tagGeneral"
+            class="btn btn-outline-secondary m-2"
+            onclick="setTag('General')"
+          >
+            General
+          </button>
+          <button
+            id="tagAboutMe"
+            class="btn btn-outline-secondary m-2"
+            onclick="setTag('AboutMe')"
+          >
+            AboutMe
+          </button>
+          <button
+            id="tagGameAutomation"
+            class="btn btn-outline-secondary m-2"
+            onclick="setTag('GameAutomation')"
+          >
+            GameAutomation
+          </button>
+          <button
+            id="tagGameAutomation"
+            class="btn btn-outline-secondary m-2"
+            onclick="setTag('Money')"
+          >
+            Money
+          </button>
         </div>
+      </div>
     </section>
     <section class="news-list py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">News List</h2>
-            <div class="row">
-                <div class="col-md-4 news-item mb-4" data-tags="Money" data-date="2024-09">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">共有口座運用についての調査</h5>
-                            <a href="news/news_3.html" class="btn btn-primary" target="_blank">Read More</a>
-                            <div class="mt-2">
-                                <span class="badge badge-secondary">Money</span>
-                            </div>
-                            <div class="mt-2">
-                                <small class="text-muted">Date: 2024-11-24</small>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <h2 class="text-center mb-4">News List</h2>
+        <div class="row">
+          <div
+            class="col-md-4 news-item mb-4"
+            data-tags="Money"
+            data-date="2024-09"
+          >
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">共有口座運用についての調査</h5>
+                <a
+                  href="news/news_3.html"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >Read More</a
+                >
+                <div class="mt-2">
+                  <span class="badge badge-secondary">Money</span>
                 </div>
-                <div class="col-md-4 news-item mb-4" data-tags="GameAutomation" data-date="2024-08">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Nintendo Switchのゲームを自動化する①</h5>
-                            <a href="news/news_2.html" class="btn btn-primary" target="_blank">Read More</a>
-                            <div class="mt-2">
-                                <span class="badge badge-secondary">GameAutomation</span>
-                            </div>
-                            <div class="mt-2">
-                                <small class="text-muted">Date: 2024-08-31</small>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mt-2">
+                  <small class="text-muted">Date: 2024-11-24</small>
                 </div>
-                <div class="col-md-4 news-item mb-4" data-tags="General AboutMe" data-date="2024-08">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">個人サイトを開設してみました</h5>
-                            <a href="news/news_1.html" class="btn btn-primary" target="_blank">Read More</a>
-                            <div class="mt-2">
-                                <span class="badge badge-secondary">General</span>
-                                <span class="badge badge-secondary">AboutMe</span>
-                            </div>
-                            <div class="mt-2">
-                                <small class="text-muted">Date: 2024-08-06</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <div
+            class="col-md-4 news-item mb-4"
+            data-tags="GameAutomation"
+            data-date="2024-08"
+          >
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Nintendo Switchのゲームを自動化する①</h5>
+                <a
+                  href="news/news_2.html"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >Read More</a
+                >
+                <div class="mt-2">
+                  <span class="badge badge-secondary">GameAutomation</span>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted">Date: 2024-08-31</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-4 news-item mb-4"
+            data-tags="General AboutMe"
+            data-date="2024-08"
+          >
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">個人サイトを開設してみました</h5>
+                <a
+                  href="news/news_1.html"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >Read More</a
+                >
+                <div class="mt-2">
+                  <span class="badge badge-secondary">General</span>
+                  <span class="badge badge-secondary">AboutMe</span>
+                </div>
+                <div class="mt-2">
+                  <small class="text-muted">Date: 2024-08-06</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 nngkhyt. All rights reserved.</p>
+      <p>&copy; 2024 nngkhyt. All rights reserved.</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrap.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-</body>
+  </body>
 </html>
