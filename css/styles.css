@@ -246,6 +246,15 @@ img.rounded-circle {
     overflow: hidden; /* 枠外に出る部分を隠す */
 }
 
+.video-container {
+    position: relative;
+    width: 100%; /* 親要素の幅にフィット */
+    max-width: 100%; /* 必要に応じて最大幅を設定 */
+    padding-bottom: 56.25%; /* アスペクト比16:9を維持 */
+    height: 0; /* 高さを0にしてアスペクト比を維持 */
+    overflow: hidden;
+}
+
 .video-container iframe {
     position: absolute;
     top: 0;
